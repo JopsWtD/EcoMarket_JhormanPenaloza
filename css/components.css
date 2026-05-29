@@ -1,0 +1,114 @@
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(255, 255, 255);
+    padding-right: 5rem;
+}
+
+.main-nav hr {
+    display: inline-block;
+    border: none;
+    width: 0.0625rem;
+    height: 40%;
+    background-color: #999;
+    margin: 0 0.625rem;
+    vertical-align: middle;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#logo {
+    height: 100%;
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    padding: 0.25rem 0.5rem;
+}
+
+.ref-container {
+    display: flex;
+    gap: 1.5rem;
+    height: 100%;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.ref-container a {
+    font-size: 0.95rem;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.ref-container a:hover,
+.hero-content button {
+    color: var(--color-btn-hvr);
+}
+
+.stuff-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.hero {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(135deg,
+            rgba(15, 40, 25, 0.55) 0%,
+            rgba(39, 174, 96, 0.45) 100%), url(../img/hero/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 100ch;
+    color: white;
+    padding: 2.6rem 3.3rem 0 0;
+    text-align: center;
+}
+
+.hero-content #titulo {
+    font-weight: bolder;
+    text-shadow: 0.125rem 0.125rem 0.3125rem rgb(100, 99, 99);
+    font-size: 4rem;
+    line-height: 1.3;
+}
+
+.hero-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 8rem;
+}
+
+.hero-desc p {
+    max-width: 70ch;
+    font-size: 1.3rem;
+}
+
+.cta-button {
+    text-decoration: none;
+    color: var(--color-btn-hvr);
+    padding: 1rem 1rem;
+    background-color: white;
+    border-radius: 3rem;
+    outline: 3px solid hsl(120, 100%, 40%);
+    outline-offset: 0.13rem;
+}

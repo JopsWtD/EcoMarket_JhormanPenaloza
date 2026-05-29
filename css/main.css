@@ -1,5 +1,9 @@
 :root {
     --color-text: #1f2d24;
+    --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-family-heading: var(--font-family-base);
+    --color-btn-hvr: #08c537;
 }
 
 * {
@@ -12,4 +16,12 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    min-height: 100vh;
+    font-family: var(--font-family-base);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

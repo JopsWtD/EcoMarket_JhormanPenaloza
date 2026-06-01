@@ -4,6 +4,7 @@
         Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-family-heading: var(--font-family-base);
     --color-btn-hvr: #08c537;
+    --color-bg: hsl(120, 5%, 90%)
 }
 
 * {

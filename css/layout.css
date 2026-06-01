@@ -7,8 +7,76 @@
     z-index: 1000;
 }
 
+
+.products {
+    width: 100%;
+    padding-block: 2rem;
+}
+
+.product-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-evenly;
+    padding-inline: 2rem;
+    gap: 1.5rem;
+    row-gap: 2rem;
+}
+
 .site-footer {
     margin-top: 6rem;
     color: #d8e2dc;
     background-color: var(--color-text);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 4rem 1rem 2.5rem;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+
+
+
+@media (min-width: 720px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding-inline: var(--space-md);
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

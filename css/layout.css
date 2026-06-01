@@ -34,6 +34,21 @@
     row-gap: 2rem;
 }
 
+.catalog {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 2rem 1.5rem;
+}
+
+.catalog-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .site-footer {
     margin-top: 6rem;
     color: #d8e2dc;
@@ -66,8 +81,9 @@
         padding-inline: var(--space-md);
     }
 
-    .card-container {
-        grid-template-columns: repeat(3, 1fr);
+    .card-container,
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -77,6 +93,14 @@
     }
 
     .card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .catalog {
+        grid-template-columns: 260px 1fr;
+    }
+
+    .catalog-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }

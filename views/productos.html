@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EcoMarket - Productos</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/components.css">
@@ -37,417 +37,367 @@
         </nav>
     </header>
 
-    <main>
-        <section class="products">
-            <div class="product-container">
-
-                <section class="category">
-                    <h2 class="category-title">Platos</h2>
-
-                    <div class="card-container">
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto1.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto2.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto3.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto4.jpg">
-                            </div>
-
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-
-                        </article>
-
-                    </div>
-
-                </section>
+    <main class="catalog">
+        <aside class="filters">
+            <div class="filters-block">
+                <h3 class="filters-title">Categorías</h3>
+                <ul class="filters-list">
+                    <li><label><input type="checkbox"> Hogar</label></li>
+                    <li><label><input type="checkbox"> Moda</label></li>
+                    <li><label><input type="checkbox"> Cuidado Personal</label></li>
+                    <li><label><input type="checkbox"> Alimentos</label></li>
+                </ul>
             </div>
-        </section>
 
-        <section class="products">
-            <div class="product-container">
-
-                <section class="category">
-                    <h2 class="category-title">Vasos</h2>
-
-                    <div class="card-container">
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto6.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto7.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto8.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto9.jpg">
-                            </div>
-
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-
-                        </article>
-
-                    </div>
-
-                </section>
+            <div class="filters-block">
+                <h3 class="filters-title">Rango de precio</h3>
+                <input type="range" min="0" max="200000" step="1000" class="filters-range">
+                <div class="filters-range-labels">
+                    <span>$0</span>
+                    <span>$200.000</span>
+                </div>
             </div>
-        </section>
 
-        <section class="products">
-            <div class="product-container">
-
-                <section class="category">
-                    <h2 class="category-title">Bolsos</h2>
-
-                    <div class="card-container">
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto11.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto12.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto13.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto14.jpg">
-                            </div>
-
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-
-                        </article>
-
-                    </div>
-
-                </section>
+            <div class="filters-block">
+                <h3 class="filters-title">Disponibilidad</h3>
+                <ul class="filters-list">
+                    <li><label><input type="checkbox" checked> En stock</label></li>
+                    <li><label><input type="checkbox"> Agotado</label></li>
+                </ul>
             </div>
-        </section>
+        </aside>
 
-        <section class="products">
-            <div class="product-container">
-
-                <section class="category">
-                    <h2 class="category-title">Cepillos de dientes</h2>
-
-                    <div class="card-container">
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto16.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto17.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto18.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto19.jpg">
-                            </div>
-
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-
-                        </article>
-
-                    </div>
-
-                </section>
+        <div class="catalog-main">
+            <div class="search-bar">
+                <input type="search" class="search-input" placeholder="Buscar productos ecológicos...">
+                <button class="search-button" type="button" aria-label="Buscar"></button>
             </div>
-        </section>
 
-        <section class="products">
-            <div class="product-container">
-
-                <section class="category">
-                    <h2 class="category-title">Botellas de acero inoxidable</h2>
-
-                    <div class="card-container">
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto21.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto22.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto23.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto24.jpg">
-                            </div>
-
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-
-                        </article>
-
+            <section class="catalog-grid">
+                <article class="card" id="prod-1">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto1.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-1" class="card-fav" aria-label="Marcar como favorito">♥</a>
                     </div>
-
-                </section>
-            </div>
-        </section>
-
-        <section class="products">
-            <div class="product-container">
-
-                <section class="category">
-                    <h2 class="category-title">Kits de baño</h2>
-
-                    <div class="card-container">
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto26.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto27.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto28.jpg">
-                            </div>
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-                        </article>
-
-                        <article class="card">
-                            <div class="card-img-wrap">
-                                <img src="/img/products/producto29.jpg">
-                            </div>
-
-                            <div class="card-info">
-                                <h3>Nombre del producto</h3>
-                                <p>Descripción corta del producto</p>
-                                <span class="precio">Precio</span>
-                            </div>
-
-                        </article>
-
+                    <div class="card-info">
+                        <h3>Plato de bambú</h3>
+                        <p>Plato reutilizable de bambú natural</p>
+                        <span class="precio">$25.000</span>
                     </div>
+                </article>
 
-                </section>
-            </div>
-        </section>
+                <article class="card" id="prod-2">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto2.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-2" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Set de cubiertos</h3>
+                        <p>Cubiertos de madera para llevar</p>
+                        <span class="precio">$32.000</span>
+                    </div>
+                </article>
 
+                <article class="card" id="prod-3">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto3.jpg">
+                        <span class="card-stock out-stock">Agotado</span>
+                        <a href="#prod-3" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Plato hondo de cerámica</h3>
+                        <p>Cerámica artesanal sin esmalte tóxico</p>
+                        <span class="precio">$38.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-4">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto4.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-4" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Tabla de servir</h3>
+                        <p>Tabla de bambú para tapas y quesos</p>
+                        <span class="precio">$45.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-5">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto6.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-5" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Vaso de vidrio reciclado</h3>
+                        <p>Vaso artesanal hecho con vidrio reciclado</p>
+                        <span class="precio">$18.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-6">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto7.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-6" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Taza de bambú</h3>
+                        <p>Taza para café reutilizable</p>
+                        <span class="precio">$22.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-7">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto8.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-7" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Vaso térmico</h3>
+                        <p>Mantiene la temperatura por 6 horas</p>
+                        <span class="precio">$48.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-8">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto9.jpg">
+                        <span class="card-stock out-stock">Agotado</span>
+                        <a href="#prod-8" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Pocillo cerámico</h3>
+                        <p>Pocillo pintado a mano por artesanos locales</p>
+                        <span class="precio">$28.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-9">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto11.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-9" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Bolso de yute</h3>
+                        <p>Bolso reutilizable para el mercado</p>
+                        <span class="precio">$35.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-10">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto12.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-10" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Mochila eco</h3>
+                        <p>Hecha con botellas recicladas</p>
+                        <span class="precio">$120.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-11">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto13.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-11" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Cartera de algodón</h3>
+                        <p>Algodón orgánico certificado</p>
+                        <span class="precio">$55.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-12">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto14.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-12" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Bolsa de tela plegable</h3>
+                        <p>Compacta, ideal para llevar siempre contigo</p>
+                        <span class="precio">$15.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-13">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto16.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-13" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Cepillo de bambú</h3>
+                        <p>Cerdas biodegradables, mango natural</p>
+                        <span class="precio">$8.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-14">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto17.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-14" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Pack 4 cepillos</h3>
+                        <p>Ahorra comprando en pack familiar</p>
+                        <span class="precio">$28.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-15">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto18.jpg">
+                        <span class="card-stock out-stock">Agotado</span>
+                        <a href="#prod-15" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Cepillo infantil</h3>
+                        <p>Diseño suave especial para niños</p>
+                        <span class="precio">$10.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-16">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto19.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-16" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Hilo dental de seda</h3>
+                        <p>Sin plástico, en frasco recargable</p>
+                        <span class="precio">$14.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-17">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto21.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-17" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Botella 500ml</h3>
+                        <p>Acero inoxidable, libre de BPA</p>
+                        <span class="precio">$42.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-18">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto22.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-18" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Botella 750ml</h3>
+                        <p>Térmica, doble pared</p>
+                        <span class="precio">$58.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-19">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto23.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-19" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Botella deportiva</h3>
+                        <p>Con boquilla y correa</p>
+                        <span class="precio">$65.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-20">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto26.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <a href="#prod-20" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                    </div>
+                    <div class="card-info">
+                        <h3>Kit baño completo</h3>
+                        <p>Champú sólido, cepillo y jabón</p>
+                        <span class="precio">$95.000</span>
+                    </div>
+                </article>
+            </section>
+
+            <nav class="pagination" aria-label="Paginación">
+                <a href="#" class="page-control">Anterior</a>
+                <a href="#" class="page-number active">1</a>
+                <a href="#" class="page-number">2</a>
+                <a href="#" class="page-number">3</a>
+                <a href="#" class="page-control">Siguiente</a>
+            </nav>
+        </div>
     </main>
 
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section footer-brand">
+                <h2 class="footer-title">EcoMarket</h2>
+                <p class="footer-tagline">
+                    Productos ecológicos para un mundo más sostenible.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Contacto</h3>
+                <address class="footer-contact">
+                    <p>Cra. 7 #45-28, Bogotá, Colombia</p>
+                    <p>Email: <a href="mailto:hola@ecomarket.com">hola@ecomarket.com</a></p>
+                    <p>Tel: <a href="tel:+5713001234">+57 1 300 1234</a></p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Información</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Política de Envíos</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Síguenos</h3>
+                <ul class="social-links" aria-label="Redes sociales">
+                    <li>
+                        <a href="#" aria-label="Síguenos en Instagram" class="social-link">
+                            <span aria-hidden="true">Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Síguenos en Facebook" class="social-link">
+                            <span aria-hidden="true">Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Síguenos en Twitter" class="social-link">
+                            <span aria-hidden="true">Twitter</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>2026 EcoMarket. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
-
-<footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-section footer-brand">
-            <h2 class="footer-title">EcoMarket</h2>
-            <p class="footer-tagline">
-                Productos ecológicos para un mundo más sostenible.
-            </p>
-        </div>
-        <div class="footer-section">
-            <h3 class="footer-title">Contacto</h3>
-            <address class="footer-contact">
-                <p>Cra. 7 #45-28, Bogotá, Colombia</p>
-                <p>Email: <a href="mailto:hola@ecomarket.com">hola@ecomarket.com</a></p>
-                <p>Tel: <a href="tel:+5713001234">+57 1 300 1234</a></p>
-            </address>
-        </div>
-
-        <div class="footer-section">
-            <h3 class="footer-title">Información</h3>
-            <ul class="footer-links">
-                <li><a href="#">Términos y Condiciones</a></li>
-                <li><a href="#">Política de Privacidad</a></li>
-                <li><a href="#">Política de Envíos</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3 class="footer-title">Síguenos</h3>
-            <ul class="social-links" aria-label="Redes sociales">
-                <li>
-                    <a href="#" aria-label="Síguenos en Instagram" class="social-link">
-                        <span aria-hidden="true">Instagram</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Síguenos en Facebook" class="social-link">
-                        <span aria-hidden="true">Facebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Síguenos en Twitter" class="social-link">
-                        <span aria-hidden="true">Twitter</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>2026 EcoMarket. Todos los derechos reservados.</p>
-    </div>
-</footer>
 
 </html>

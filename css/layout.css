@@ -69,6 +69,14 @@
     .card-container {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .principles-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial-card {
+        flex: 0 0 45%;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -78,5 +86,19 @@
 
     .card-container {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .history-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .principles-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .testimonial-card {
+        flex: 0 0 31%;
     }
 }

@@ -746,3 +746,227 @@
     background-color: var(--color-btn-hvr);
     color: white;
 }
+
+.filters {
+    position: sticky;
+    top: 11vh;
+    align-self: start;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.filters-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.filters-title {
+    color: var(--color-btn-hvr);
+    font-size: 1rem;
+    border-bottom: 2px solid var(--color-bg);
+    padding-bottom: 0.4rem;
+}
+
+.filters-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.filters-list label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.filters-list label:hover {
+    color: var(--color-btn-hvr);
+}
+
+.filters-list input[type="checkbox"] {
+    accent-color: var(--color-btn-hvr);
+    width: 1rem;
+    height: 1rem;
+}
+
+.filters-range {
+    accent-color: var(--color-btn-hvr);
+    width: 100%;
+}
+
+.filters-range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: hsl(120, 5%, 35%);
+}
+
+.search-bar {
+    display: flex;
+    gap: 0.5rem;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 0.4rem 0.4rem 0.4rem 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar:focus-within {
+    border-color: var(--color-btn-hvr);
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: transparent;
+    color: var(--color-text);
+}
+
+.search-button {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-btn-hvr);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-button::before {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    width: 0.7rem;
+    height: 0.7rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.search-button::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 58%;
+    width: 0.5rem;
+    height: 2px;
+    background-color: white;
+    transform: rotate(45deg);
+    transform-origin: left center;
+}
+
+.search-button:hover {
+    background-color: hsl(120, 100%, 35%);
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.card-stock {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+}
+
+.card-stock.in-stock {
+    background-color: var(--color-btn-hvr);
+}
+
+.card-stock.out-stock {
+    background-color: #e74c3c;
+}
+
+.card-fav {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #999;
+    text-decoration: none;
+    font-size: 1.2rem;
+    z-index: 2;
+    transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.card-fav:hover {
+    transform: scale(1.15);
+}
+
+.card-fav:active {
+    color: #e74c3c;
+}
+
+.card:target .card-fav {
+    color: #e74c3c;
+    background-color: white;
+    animation: bigsmall 0.4s ease;
+}
+
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.page-number,
+.page-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 0.9rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    color: var(--color-text);
+    text-decoration: none;
+    border: 1px solid #d0d7d2;
+    font-weight: bold;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.page-number:hover,
+.page-control:hover {
+    background-color: var(--color-btn-hvr);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.page-number.active {
+    background-color: var(--color-btn-hvr);
+    color: white;
+    border-color: var(--color-btn-hvr);
+}

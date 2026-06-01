@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sobre Nosotros - EcoMarket</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/components.css">
@@ -15,7 +15,7 @@
     <header class="presentacion">
         <nav class="main-nav">
             <div class="logo-container">
-                <img id="logo" src="/img/hero/logo.png">
+                <img id="logo" src="/img/hero/logo.png" alt="EcoMarket">
             </div>
 
             <div class="ref-container">
@@ -31,68 +31,231 @@
             </div>
 
             <div class="stuff-container">
-                <button>Buscar</button>
-                <button>Carrito</button>
+                <a>
+                    <span class="action-icon" aria-hidden="true">&#128269;</span>
+                </a>
+                <a>
+                    <span class="action-icon" aria-hidden="true">&#128722;</span>
+                    <span class="cart-count" aria-label="0 productos en el carrito">0</span>
+                </a>
             </div>
         </nav>
     </header>
+
     <main>
 
+        <section class="brand-story">
+            <div class="brand-story-container">
+                <div class="brand-story-img-wrap">
+                    <img src="/img/hero/background.png" alt="El origen de EcoMarket">
+                </div>
+                <div class="brand-story-content">
+                    <h1 class="brand-story-title">Nuestra historia</h1>
+                    <p>EcoMarket nació en 2020 con una idea sencilla: hacer que vivir de forma
+                        sostenible sea fácil y accesible para todos. Lo que comenzó como un
+                        pequeño mercado local se convirtió en una plataforma que conecta a
+                        consumidores conscientes con productores que comparten los mismos valores.</p>
+                    <p>Creemos que cada compra es una decisión. Por eso seleccionamos
+                        cuidadosamente cada producto que ofrecemos, asegurándonos de que cumpla
+                        con nuestros estándares de sostenibilidad, comercio justo y respeto
+                        por el medioambiente.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="principles">
+            <div class="principles-container">
+                <h2 class="category-title">Nuestros principios</h2>
+                <ul class="principles-list">
+                    <li class="principle-item">
+                        <div class="principle-icon-wrap">
+                            <span class="principle-icon" aria-hidden="true">&#127807;</span>
+                        </div>
+                        <div class="principle-content">
+                            <h3 class="principle-name">Sin Plástico</h3>
+                            <p>Todos nuestros productos y empaques están libres de plástico
+                                de un solo uso.</p>
+                        </div>
+                    </li>
+                    <li class="principle-item">
+                        <div class="principle-icon-wrap">
+                            <span class="principle-icon" aria-hidden="true">&#9877;</span>
+                        </div>
+                        <div class="principle-content">
+                            <h3 class="principle-name">Comercio Justo</h3>
+                            <p>Trabajamos directamente con productores locales garantizando
+                                precios justos y condiciones dignas.</p>
+                        </div>
+                    </li>
+                    <li class="principle-item">
+                        <div class="principle-icon-wrap">
+                            <span class="principle-icon" aria-hidden="true">&#9842;</span>
+                        </div>
+                        <div class="principle-content">
+                            <h3 class="principle-name">100% Reciclable</h3>
+                            <p>Todos nuestros empaques son reciclables o compostables.</p>
+                        </div>
+                    </li>
+                    <li class="principle-item">
+                        <div class="principle-icon-wrap">
+                            <span class="principle-icon" aria-hidden="true">&#127758;</span>
+                        </div>
+                        <div class="principle-content">
+                            <h3 class="principle-name">Huella de Carbono Cero</h3>
+                            <p>Compensamos el 100% de las emisiones generadas por nuestros
+                                envíos.</p>
+                        </div>
+                    </li>
+                    <li class="principle-item">
+                        <div class="principle-icon-wrap">
+                            <span class="principle-icon" aria-hidden="true">&#128200;</span>
+                        </div>
+                        <div class="principle-content">
+                            <h3 class="principle-name">Transparencia</h3>
+                            <p>Publicamos el origen y proceso de fabricación de cada
+                                producto.</p>
+                        </div>
+                    </li>
+                    <li class="principle-item">
+                        <div class="principle-icon-wrap">
+                            <span class="principle-icon" aria-hidden="true">&#128155;</span>
+                        </div>
+                        <div class="principle-content">
+                            <h3 class="principle-name">Impacto Social</h3>
+                            <p>El 5% de nuestras ganancias se destina a proyectos
+                                medioambientales en Colombia.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="testimonials-container">
+                <h2 class="category-title">Lo que dicen nuestros clientes</h2>
+
+                <div class="carousel">
+                    <div class="carousel-track">
+
+                        <article class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-avatar-wrap">
+                                    <img src="/img/hero/logo.png" alt="Foto de Laura Martínez"
+                                        class="testimonial-avatar">
+                                </div>
+                                <div class="testimonial-meta">
+                                    <h3 class="testimonial-name">Laura Martínez</h3>
+                                    <div class="testimonial-stars" aria-label="5 de 5 estrellas">
+                                        <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <blockquote class="testimonial-comment">
+                                "Desde que descubrí EcoMarket no compro en ningún otro lado. Los
+                                productos son de excelente calidad y sé que estoy haciendo algo
+                                bueno por el planeta."
+                            </blockquote>
+                        </article>
+
+                        <article class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-avatar-wrap">
+                                    <img src="/img/hero/logo.png" alt="Foto de Camilo Herrera"
+                                        class="testimonial-avatar">
+                                </div>
+                                <div class="testimonial-meta">
+                                    <h3 class="testimonial-name">Camilo Herrera</h3>
+                                    <div class="testimonial-stars" aria-label="5 de 5 estrellas">
+                                        <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <blockquote class="testimonial-comment">
+                                "Los envíos son rápidos y los empaques completamente libres de
+                                plástico. Me encanta que la experiencia de compra sea coherente
+                                con los valores de la marca."
+                            </blockquote>
+                        </article>
+
+                        <article class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-avatar-wrap">
+                                    <img src="/img/hero/logo.png" alt="Foto de Sofía Ríos"
+                                        class="testimonial-avatar">
+                                </div>
+                                <div class="testimonial-meta">
+                                    <h3 class="testimonial-name">Sofía Ríos</h3>
+                                    <div class="testimonial-stars" aria-label="4 de 5 estrellas">
+                                        <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <blockquote class="testimonial-comment">
+                                "El cepillo de bambú cambió mi rutina de cuidado personal.
+                                Pensé que sería un sacrificio, pero es igual o mejor que los
+                                convencionales."
+                            </blockquote>
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section footer-brand">
+                <h2 class="footer-title">EcoMarket</h2>
+                <p class="footer-tagline">
+                    Productos ecológicos para un mundo más sostenible.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Contacto</h3>
+                <address class="footer-contact">
+                    <p>Cra. 7 #45-28, Bogotá, Colombia</p>
+                    <p>Email: <a href="mailto:hola@ecomarket.com">hola@ecomarket.com</a></p>
+                    <p>Tel: <a href="tel:+5713001234">+57 1 300 1234</a></p>
+                </address>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Información</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Política de Envíos</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Síguenos</h3>
+                <ul class="social-links" aria-label="Redes sociales">
+                    <li>
+                        <a href="#" aria-label="Síguenos en Instagram" class="social-link">
+                            <span aria-hidden="true">Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Síguenos en Facebook" class="social-link">
+                            <span aria-hidden="true">Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Síguenos en Twitter" class="social-link">
+                            <span aria-hidden="true">Twitter</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2026 EcoMarket. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
 </body>
-
-<footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-section footer-brand">
-            <h2 class="footer-title">EcoMarket</h2>
-            <p class="footer-tagline">
-                Productos ecológicos para un mundo más sostenible.
-            </p>
-        </div>
-        <div class="footer-section">
-            <h3 class="footer-title">Contacto</h3>
-            <address class="footer-contact">
-                <p>Cra. 7 #45-28, Bogotá, Colombia</p>
-                <p>Email: <a href="mailto:hola@ecomarket.com">hola@ecomarket.com</a></p>
-                <p>Tel: <a href="tel:+5713001234">+57 1 300 1234</a></p>
-            </address>
-        </div>
-
-        <div class="footer-section">
-            <h3 class="footer-title">Información</h3>
-            <ul class="footer-links">
-                <li><a href="#">Términos y Condiciones</a></li>
-                <li><a href="#">Política de Privacidad</a></li>
-                <li><a href="#">Política de Envíos</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3 class="footer-title">Síguenos</h3>
-            <ul class="social-links" aria-label="Redes sociales">
-                <li>
-                    <a href="#" aria-label="Síguenos en Instagram" class="social-link">
-                        <span aria-hidden="true">Instagram</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Síguenos en Facebook" class="social-link">
-                        <span aria-hidden="true">Facebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Síguenos en Twitter" class="social-link">
-                        <span aria-hidden="true">Twitter</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>2026 EcoMarket. Todos los derechos reservados.</p>
-    </div>
-</footer>
 
 </html>

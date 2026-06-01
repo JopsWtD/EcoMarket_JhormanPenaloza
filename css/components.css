@@ -158,6 +158,52 @@
     border-radius: 0.5rem;
     overflow: hidden;
     background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(8, 197, 55, 0.18);
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1rem;
+}
+
+.card-info h3 {
+    font-size: 1.05rem;
+    color: var(--color-text);
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: hsl(120, 5%, 35%);
+}
+
+.precio {
+    font-weight: bold;
+    color: var(--color-btn-hvr);
+}
+
+.card-button {
+    align-self: flex-start;
+    margin-top: 0.4rem;
+    color: white;
+    background-color: var(--color-btn-hvr);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.card-button:hover {
+    background-color: hsl(120, 100%, 35%);
+    transform: scale(1.05);
 }
 
 .card-img-wrap {

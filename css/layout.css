@@ -101,4 +101,9 @@
     .testimonial-card {
         flex: 0 0 31%;
     }
+
+    .contact-body-container {
+        grid-template-columns: 3fr 2fr;
+        align-items: start;
+    }
 }

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EcoMarket - Contáctanos</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/components.css">
@@ -38,63 +38,141 @@
     </header>
 
     <main>
+        <section class="contact-intro">
+            <h1 class="contact-intro-title">Hablemos de sostenibilidad</h1>
 
+            <div class="contact-intro-questions">
+                <div class="contact-question" style="--line-delay: 0s;">
+                    <p class="contact-intro-desc">¿Tienes alguna duda o sugerencia?</p>
+                    <span class="contact-intro-line" aria-hidden="true"></span>
+                </div>
+                <div class="contact-question" style="--line-delay: 0.15s;">
+                    <p class="contact-intro-desc">¿Tienes alguna queja y/o idea?</p>
+                    <span class="contact-intro-line" aria-hidden="true"></span>
+                </div>
+                <div class="contact-question" style="--line-delay: 0.3s;">
+                    <p class="contact-intro-desc">¿Tienes alguna propuesta o comentario?</p>
+                    <span class="contact-intro-line" aria-hidden="true"></span>
+                </div>
+            </div>
+
+            <a href="#contact-section" class="contact-intro-button">Ir al formulario</a>
+        </section>
+
+        <section class="contact-body" id="contact-section">
+            <div class="contact-body-container">
+                <form id="contact-form" class="contact-form" novalidate>
+                    <h2 class="section-title">Envíanos un mensaje</h2>
+
+                    <label class="form-field">
+                        <span class="form-label">Nombre</span>
+                        <input type="text" name="name" required minlength="2" placeholder="Tu nombre">
+                    </label>
+
+                    <label class="form-field">
+                        <span class="form-label">Email</span>
+                        <input type="email" name="email" required placeholder="tu@correo.com">
+                    </label>
+
+                    <label class="form-field">
+                        <span class="form-label">Mensaje</span>
+                        <textarea name="message" rows="5" required minlength="10"
+                            placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                    </label>
+
+                    <button type="submit" class="form-submit">Enviar mensaje</button>
+                </form>
+
+                <aside class="contact-info">
+                    <h2 class="section-title">Visítanos</h2>
+                    <div class="contact-map" aria-label="Mapa de ubicación">
+                        <div class="contact-map-pin" aria-hidden="true"></div>
+                        <div class="contact-map-overlay">
+                            <p>Cra. 7 #45-28</p>
+                            <p>Bogotá, Colombia</p>
+                        </div>
+                    </div>
+
+                    <ul class="contact-socials" aria-label="Redes sociales">
+                        <li>
+                            <a href="#" class="contact-social-link" aria-label="Instagram">
+                                <span aria-hidden="true">IG</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="contact-social-link" aria-label="Facebook">
+                                <span aria-hidden="true">FB</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="contact-social-link" aria-label="Twitter">
+                                <span aria-hidden="true">TW</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="contact-social-link" aria-label="WhatsApp">
+                                <span aria-hidden="true">WA</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
     </main>
 
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section footer-brand">
+                <h2 class="footer-title">EcoMarket</h2>
+                <p class="footer-tagline">
+                    Productos ecológicos para un mundo más sostenible.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Contacto</h3>
+                <address class="footer-contact">
+                    <p>Cra. 7 #45-28, Bogotá, Colombia</p>
+                    <p>Email: <a href="mailto:hola@ecomarket.com">hola@ecomarket.com</a></p>
+                    <p>Tel: <a href="tel:+5713001234">+57 1 300 1234</a></p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Información</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Política de Envíos</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Síguenos</h3>
+                <ul class="social-links" aria-label="Redes sociales">
+                    <li>
+                        <a href="#" aria-label="Síguenos en Instagram" class="social-link">
+                            <span aria-hidden="true">Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Síguenos en Facebook" class="social-link">
+                            <span aria-hidden="true">Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Síguenos en Twitter" class="social-link">
+                            <span aria-hidden="true">Twitter</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>2026 EcoMarket. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
-
-<footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-section footer-brand">
-            <h2 class="footer-title">EcoMarket</h2>
-            <p class="footer-tagline">
-                Productos ecológicos para un mundo más sostenible.
-            </p>
-        </div>
-        <div class="footer-section">
-            <h3 class="footer-title">Contacto</h3>
-            <address class="footer-contact">
-                <p>Cra. 7 #45-28, Bogotá, Colombia</p>
-                <p>Email: <a href="mailto:hola@ecomarket.com">hola@ecomarket.com</a></p>
-                <p>Tel: <a href="tel:+5713001234">+57 1 300 1234</a></p>
-            </address>
-        </div>
-
-        <div class="footer-section">
-            <h3 class="footer-title">Información</h3>
-            <ul class="footer-links">
-                <li><a href="#">Términos y Condiciones</a></li>
-                <li><a href="#">Política de Privacidad</a></li>
-                <li><a href="#">Política de Envíos</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3 class="footer-title">Síguenos</h3>
-            <ul class="social-links" aria-label="Redes sociales">
-                <li>
-                    <a href="#" aria-label="Síguenos en Instagram" class="social-link">
-                        <span aria-hidden="true">Instagram</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Síguenos en Facebook" class="social-link">
-                        <span aria-hidden="true">Facebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Síguenos en Twitter" class="social-link">
-                        <span aria-hidden="true">Twitter</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>2026 EcoMarket. Todos los derechos reservados.</p>
-    </div>
-</footer>
 
 </html>

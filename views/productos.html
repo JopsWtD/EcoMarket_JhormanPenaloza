@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoMarket - Productos</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/img/icons/favicon.svg">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/components.css">
@@ -16,7 +16,7 @@
     <header class="presentacion">
         <nav class="main-nav">
             <div class="logo-container">
-                <img id="logo" src="/img/hero/logo.png">
+                <img id="logo" src="/img/hero/logo.png" alt="EcoMarket">
             </div>
 
             <div class="ref-container">
@@ -34,372 +34,365 @@
     </header>
 
     <main class="catalog">
+        <!-- Anchors invisibles para filtrar por categoría desde URL hash
+             (al venir de "Ver más" en la home). Ver components.css -->
+        <span id="cat-hogar" class="cat-anchor" aria-hidden="true"></span>
+        <span id="cat-moda" class="cat-anchor" aria-hidden="true"></span>
+        <span id="cat-cuidado-personal" class="cat-anchor" aria-hidden="true"></span>
+        <span id="cat-alimentos" class="cat-anchor" aria-hidden="true"></span>
+
         <aside class="filters">
             <div class="filters-block">
                 <h3 class="filters-title">Categorías</h3>
                 <ul class="filters-list">
-                    <li><label><input type="checkbox" id="filter-todos" checked>Todos</label></li>
-                    <li><label><input type="checkbox" class="blocked-checkbox" id="filter-hogar" checked>Hogar</label>
-                    </li>
-                    <li><label><input type="checkbox" class="blocked-checkbox" id="filter-moda" checked>Moda</label>
-                    </li>
-                    <li><label><input type="checkbox" class="blocked-checkbox" id="filter-cuidado" checked>Cuidado
-                            Personal</label>
-                    </li>
-                    <li><label><input type="checkbox" class="blocked-checkbox" id="filter-alimentos"
-                                checked>Alimentos</label></li>
+                    <li><label><input type="checkbox" id="filter-hogar" class="filter-cat">Hogar</label></li>
+                    <li><label><input type="checkbox" id="filter-moda" class="filter-cat">Moda</label></li>
+                    <li><label><input type="checkbox" id="filter-cuidado" class="filter-cat">Cuidado Personal</label></li>
+                    <li><label><input type="checkbox" id="filter-alimentos" class="filter-cat">Alimentos</label></li>
                 </ul>
             </div>
 
             <div class="filters-block">
                 <h3 class="filters-title">Rango de precio</h3>
                 <ul class="filters-list">
-                    <li><label><input type="checkbox" id="price-low" checked>$0 - $20.000</label></li>
-                    <li><label><input type="checkbox" id="price-mid" checked>$20.000 – $50.000</label></li>
-                    <li><label><input type="checkbox" id="price-high" checked>$50.000 – $100.000</label></li>
-                    <li><label><input type="checkbox" id="price-premium" checked>$100.000 - $200.000</label></li>
+                    <li><label><input type="checkbox" id="price-low" class="filter-price">$0 - $20.000</label></li>
+                    <li><label><input type="checkbox" id="price-mid" class="filter-price">$20.000 – $50.000</label></li>
+                    <li><label><input type="checkbox" id="price-high" class="filter-price">$50.000 – $100.000</label></li>
+                    <li><label><input type="checkbox" id="price-premium" class="filter-price">$100.000 - $200.000</label></li>
                 </ul>
             </div>
 
             <div class="filters-block">
                 <h3 class="filters-title">Disponibilidad</h3>
                 <ul class="filters-list">
-                    <li><label><input type="checkbox" id="filter-instock" checked> En stock</label></li>
-                    <li><label><input type="checkbox" id="filter-outstock"> Agotado</label></li>
+                    <li><label><input type="checkbox" id="filter-instock" class="filter-stock">En stock</label></li>
+                    <li><label><input type="checkbox" id="filter-outstock" class="filter-stock">Agotado</label></li>
                 </ul>
             </div>
         </aside>
 
         <div class="catalog-main">
             <section class="catalog-grid">
-                <article class="card" id="prod-1" data-category="hogar" data-stock="in" data-price="price-low">
+                <article class="card" data-category="hogar" data-stock="in" data-price="price-low">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto1.png">
+                        <img src="/img/products/producto1.png" alt="Cepillo de bambú">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Hogar</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Cepillo de bambú</h3>
-                            <a href="#prod-1" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Cepillo de cocina con mango de bambú y cerdas naturales</p>
                         <span class="precio">$15.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-2" data-category="cuidado-personal" data-stock="in" data-price="price-high">
+                <article class="card" data-category="cuidado-personal" data-stock="in" data-price="price-high">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto2.png">
+                        <img src="/img/products/producto2.png" alt="Eco-Essential Kit">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Cuidado</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Eco-Essential Kit</h3>
-                            <a href="#prod-2" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Set con peine, cepillos, discos reutilizables e hisopos de bambú</p>
                         <span class="precio">$75.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-3" data-category="hogar" data-stock="in" data-price="price-high">
+                <article class="card" data-category="hogar" data-stock="in" data-price="price-high">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto3.png">
+                        <img src="/img/products/producto3.png" alt="Eco-Organizers">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Hogar</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Eco-Organizers</h3>
-                            <a href="#prod-3" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Frascos de vidrio y soportes de bambú para una cocina ordenada</p>
                         <span class="precio">$85.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-4" data-category="moda" data-stock="in" data-price="price-premium">
+                <article class="card" data-category="moda" data-stock="in" data-price="price-premium">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto4.png">
+                        <img src="/img/products/producto4.png" alt="Organic Wardrobe">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Moda</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Organic Wardrobe</h3>
-                            <a href="#prod-4" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Cápsula de prendas en algodón orgánico, tonos neutros atemporales</p>
                         <span class="precio">$135.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-5" data-category="moda" data-stock="in" data-price="price-mid">
+                <article class="card" data-category="moda" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto5.png">
+                        <img src="/img/products/producto5.png" alt="Skirt Remade">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Moda</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Skirt Remade</h3>
-                            <a href="#prod-5" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Falda única hecha con jean reciclado y corbatas vintage</p>
                         <span class="precio">$45.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-6" data-category="moda" data-stock="in" data-price="price-high">
+                <article class="card" data-category="moda" data-stock="in" data-price="price-high">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto6.png">
+                        <img src="/img/products/producto6.png" alt="Free-Happy Set">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Moda</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Free-Happy Set</h3>
-                            <a href="#prod-6" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Conjunto camisa y pantalón en lino, fresco y atemporal</p>
                         <span class="precio">$90.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-7" data-category="cuidado-personal" data-stock="in" data-price="price-low">
+                <article class="card" data-category="cuidado-personal" data-stock="in" data-price="price-low">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto7.png">
+                        <img src="/img/products/producto7.png" alt="NatEssence Soap">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Cuidado</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>NatEssence Soap</h3>
-                            <a href="#prod-7" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Jabones artesanales con esencias de lavanda, naranja y rosa</p>
                         <span class="precio">$14.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-8" data-category="cuidado-personal" data-stock="in" data-price="price-low">
+                <article class="card" data-category="cuidado-personal" data-stock="in" data-price="price-low">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto8.png">
+                        <img src="/img/products/producto8.png" alt="Bamboo Toothbrush">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Cuidado</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Bamboo Toothbrush</h3>
-                            <a href="#prod-8" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Cepillo dental 100% biodegradable, cerdas suaves de carbón</p>
                         <span class="precio">$9.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-9" data-category="cuidado-personal" data-stock="in" data-price="price-high">
+                <article class="card" data-category="cuidado-personal" data-stock="in" data-price="price-high">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto9.png">
+                        <img src="/img/products/producto9.png" alt="Sryhe's Skincare">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Cuidado</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Sryhe's Skincare</h3>
-                            <a href="#prod-9" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Rutina facial completa con ingredientes naturales certificados</p>
                         <span class="precio">$85.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-10" data-category="moda" data-stock="in" data-price="price-high">
+                <article class="card" data-category="moda" data-stock="in" data-price="price-high">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto10.png">
+                        <img src="/img/products/producto10.png" alt="Bio Make-up Set">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Moda</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Bio Make-up Set</h3>
-                            <a href="#prod-10" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Maquillaje bio con brochas de bambú y empaques compostables</p>
                         <span class="precio">$80.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-11" data-category="moda" data-stock="in" data-price="price-premium">
+                <article class="card" data-category="moda" data-stock="in" data-price="price-premium">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto11.jpg">
+                        <img src="/img/products/producto11.jpg" alt="Bio Bag">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Moda</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Bio Bag</h3>
-                            <a href="#prod-11" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Bolso tejido en cuero vegetal con cadena dorada</p>
                         <span class="precio">$120.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-12" data-category="alimentos" data-stock="in" data-price="price-low">
+                <article class="card" data-category="alimentos" data-stock="in" data-price="price-low">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto12.png">
+                        <img src="/img/products/producto12.png" alt="Malla Orgánica">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Alimentos</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Malla Orgánica</h3>
-                            <a href="#prod-12" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Malla reutilizable para frutas y verduras del mercado</p>
                         <span class="precio">$12.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-13" data-category="alimentos" data-stock="in" data-price="price-mid">
+                <article class="card" data-category="alimentos" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto13.png">
+                        <img src="/img/products/producto13.png" alt="Natura Spreads">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Alimentos</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Natura Spreads</h3>
-                            <a href="#prod-13" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Surtido de untables artesanales: frutos secos, frutas y semillas</p>
                         <span class="precio">$35.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-14" data-category="hogar" data-stock="in" data-price="price-mid">
+                <article class="card" data-category="hogar" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto14.png">
+                        <img src="/img/products/producto14.png" alt="Bio Packaging">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Hogar</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Bio Packaging</h3>
-                            <a href="#prod-14" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Envases compostables de cartón kraft para servir y llevar</p>
                         <span class="precio">$28.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-15" data-category="alimentos" data-stock="in" data-price="price-mid">
+                <article class="card" data-category="alimentos" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto15.png">
+                        <img src="/img/products/producto15.png" alt="Eco Stofa">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Alimentos</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Eco Stofa</h3>
-                            <a href="#prod-15" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Granel orgánico: cereales, granos y frutos secos a la medida</p>
                         <span class="precio">$40.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-16" data-category="hogar" data-stock="in" data-price="price-high">
+                <article class="card" data-category="hogar" data-stock="in" data-price="price-high">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto16.png">
+                        <img src="/img/products/producto16.png" alt="Sryhe's CleanKit">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Hogar</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Sryhe's CleanKit</h3>
-                            <a href="#prod-16" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Kit completo con limpiador multiusos, cepillo y esponja vegetal</p>
                         <span class="precio">$55.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-17" data-category="hogar" data-stock="in" data-price="price-mid">
+                <article class="card" data-category="hogar" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto17.png">
+                        <img src="/img/products/producto17.png" alt="Sryhe's SojaVeil">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Hogar</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Sryhe's SojaVeil</h3>
-                            <a href="#prod-17" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Vela de soja natural aroma lavanda, dura 35-40 horas</p>
                         <span class="precio">$30.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-18" data-category="moda" data-stock="in" data-price="price-low">
+                <article class="card" data-category="moda" data-stock="in" data-price="price-low">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto18.png">
+                        <img src="/img/products/producto18.png" alt="Eco-Shopping bag">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Moda</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Eco-Shopping bag</h3>
-                            <a href="#prod-18" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Bolsa de algodón crudo reutilizable para tus compras diarias</p>
                         <span class="precio">$18.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-19" data-category="hogar" data-stock="in" data-price="price-mid">
+                <article class="card" data-category="hogar" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto19.png">
+                        <img src="/img/products/producto19.png" alt="Sryhe's Study Kit">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Hogar</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Sryhe's Study Kit</h3>
-                            <a href="#prod-19" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Cuaderno y bolígrafo de bambú para ideas más sostenibles</p>
                         <span class="precio">$35.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-20" data-category="hogar" data-stock="in" data-price="price-mid">
+                <article class="card" data-category="hogar" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto20.png">
+                        <img src="/img/products/producto20.png" alt="Sryhe's Termic Bottle">
                         <span class="card-stock in-stock">En stock</span>
                         <span class="product-tag">Hogar</span>
                     </div>
                     <div class="card-info">
                         <div class="card-header">
                             <h3>Sryhe's Termic Bottle</h3>
-                            <a href="#prod-20" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                            <label class="card-fav" aria-label="Marcar como favorito"><input type="checkbox" class="card-fav-toggle"><span aria-hidden="true">♥</span></label>
                         </div>
                         <p>Botella térmica con tapa de bambú, mantiene la temperatura</p>
                         <span class="precio">$45.000</span>
                     </div>
                 </article>
             </section>
-
-            <nav class="pagination" aria-label="Paginación">
-                <a href="#" class="page-control">Anterior</a>
-                <a href="#" class="page-number active">1</a>
-                <a href="#" class="page-number">2</a>
-                <a href="#" class="page-number">3</a>
-                <a href="#" class="page-control">Siguiente</a>
-            </nav>
         </div>
     </main>
 
@@ -435,17 +428,22 @@
                 <ul class="social-links" aria-label="Redes sociales">
                     <li>
                         <a href="#" aria-label="Síguenos en Instagram" class="social-link">
-                            <span aria-hidden="true">Instagram</span>
+                            <img src="/img/icons/instagram.png" alt="" aria-hidden="true">
                         </a>
                     </li>
                     <li>
                         <a href="#" aria-label="Síguenos en Facebook" class="social-link">
-                            <span aria-hidden="true">Facebook</span>
+                            <img src="/img/icons/facebook.png" alt="" aria-hidden="true">
                         </a>
                     </li>
                     <li>
-                        <a href="#" aria-label="Síguenos en Twitter" class="social-link">
-                            <span aria-hidden="true">Twitter</span>
+                        <a href="#" aria-label="Síguenos en X" class="social-link">
+                            <img src="/img/icons/x.png" alt="" aria-hidden="true">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Escríbenos por WhatsApp" class="social-link">
+                            <img src="/img/icons/whatsapp.png" alt="" aria-hidden="true">
                         </a>
                     </li>
                 </ul>

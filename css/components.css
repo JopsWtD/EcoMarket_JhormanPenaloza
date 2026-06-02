@@ -275,7 +275,10 @@
     flex: 1;
 }
 
+/* Botón corazón — checkbox oculto dentro del <label> que persiste el estado
+   sin JavaScript, sin hash en la URL y permite tantos favoritos como quieras. */
 .card-fav {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -285,10 +288,19 @@
     border-radius: 50%;
     background-color: hsl(120, 5%, 92%);
     color: #9aa0a3;
-    text-decoration: none;
+    cursor: pointer;
     font-size: 1.1rem;
     line-height: 1;
     transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* checkbox invisible pero sigue siendo focuseable con teclado */
+.card-fav-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .card-fav:hover {
@@ -298,15 +310,18 @@
     box-shadow: 0 2px 8px rgba(231, 76, 60, 0.25);
 }
 
-.card-fav:active {
-    color: #e74c3c;
-}
-
-.card:target .card-fav {
+/* Estado favorito: clic toggleó el checkbox interno */
+.card-fav:has(.card-fav-toggle:checked) {
     color: #e74c3c;
     background-color: white;
     box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
     animation: bigsmall 0.4s ease;
+}
+
+/* Accesibilidad: outline visible cuando se navega con teclado */
+.card-fav:has(.card-fav-toggle:focus-visible) {
+    outline: 2px solid var(--color-btn-hvr);
+    outline-offset: 2px;
 }
 
 
@@ -607,6 +622,19 @@
     color: white;
 }
 
+/* Iconos PNG dentro del círculo de contacto (fondo blanco → iconos negros tal cual;
+   en hover el fondo se vuelve verde, así que invertimos a blanco) */
+.contact-social-link img {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+}
+
+.contact-social-link:hover img {
+    filter: invert(1);
+}
+
 
 /* --- Sidebar filtros y buscador --- */
 .filters {
@@ -671,63 +699,56 @@
 }
 
 
-.catalog:has(#filter-todos:checked) .blocked-checkbox {
-    cursor: not-allowed;
-}
+/* === Filtros del catálogo ===
+   Lógica: sin selección en un grupo = ese grupo no filtra (muestra todo).
+   Con 1+ marcado, sólo se muestran las cards que coincidan con lo marcado.
+   Los tres grupos (categoría, precio, stock) se combinan con AND.
 
-.catalog:has(#filter-todos:not(:checked)):has(#filter-hogar:not(:checked)) .card[data-category="hogar"],
-.catalog:has(#filter-todos:not(:checked)):has(#filter-moda:not(:checked)) .card[data-category="moda"],
-.catalog:has(#filter-todos:not(:checked)):has(#filter-cuidado:not(:checked)) .card[data-category="cuidado-personal"],
-.catalog:has(#filter-todos:not(:checked)):has(#filter-alimentos:not(:checked)) .card[data-category="alimentos"],
-.catalog:has(#filter-instock:not(:checked)) .card[data-stock="in"],
-.catalog:has(#filter-outstock:not(:checked)) .card[data-stock="out"],
-.catalog:has(#price-low:not(:checked)) .card[data-price="price-low"],
-.catalog:has(#price-mid:not(:checked)) .card[data-price="price-mid"],
-.catalog:has(#price-high:not(:checked)) .card[data-price="price-high"],
-.catalog:has(#price-premium:not(:checked)) .card[data-price="price-premium"] {
+   Cómo se lee cada regla:
+   - :has(.filter-X:checked) → "hay al menos uno marcado en este grupo"
+   - :not(:has(#filter-Y:checked)) → "...pero ESTE específico no lo está"
+   → ocultar las cards de ese tipo. */
+
+/* Categoría */
+.catalog:has(.filter-cat:checked):not(:has(#filter-hogar:checked)) .card[data-category="hogar"],
+.catalog:has(.filter-cat:checked):not(:has(#filter-moda:checked)) .card[data-category="moda"],
+.catalog:has(.filter-cat:checked):not(:has(#filter-cuidado:checked)) .card[data-category="cuidado-personal"],
+.catalog:has(.filter-cat:checked):not(:has(#filter-alimentos:checked)) .card[data-category="alimentos"],
+
+/* Rango de precio */
+.catalog:has(.filter-price:checked):not(:has(#price-low:checked)) .card[data-price="price-low"],
+.catalog:has(.filter-price:checked):not(:has(#price-mid:checked)) .card[data-price="price-mid"],
+.catalog:has(.filter-price:checked):not(:has(#price-high:checked)) .card[data-price="price-high"],
+.catalog:has(.filter-price:checked):not(:has(#price-premium:checked)) .card[data-price="price-premium"],
+
+/* Disponibilidad */
+.catalog:has(.filter-stock:checked):not(:has(#filter-instock:checked)) .card[data-stock="in"],
+.catalog:has(.filter-stock:checked):not(:has(#filter-outstock:checked)) .card[data-stock="out"] {
     display: none;
 }
 
 
-/* --- Paginación --- */
-.pagination {
-    display: flex;
-    gap: 0.4rem;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    flex-wrap: wrap;
+/* === Filtro por URL hash (al venir de "Ver más" en la home) ===
+   Los anchors invisibles #cat-X dentro de .catalog reciben :target
+   cuando la URL trae el hash correspondiente. Mediante :has() la
+   condición sube al .catalog y se ocultan las cards que no son de
+   esa categoría.
+
+   Se desactiva en cuanto el usuario interactúa con CUALQUIER filtro
+   del sidebar; a partir de ahí manda la lógica de checkboxes. */
+.cat-anchor {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
 }
 
-.page-number,
-.page-control {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 2.25rem;
-    height: 2.25rem;
-    padding: 0 0.75rem;
-    border-radius: 0.5rem;
-    background-color: white;
-    color: var(--color-text);
-    text-decoration: none;
-    border: 1px solid #d0d7d2;
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-}
-
-.page-number:hover,
-.page-control:hover {
-    background-color: var(--color-btn-hvr);
-    color: white;
-    transform: translateY(-2px);
-}
-
-.page-number.active {
-    background-color: var(--color-btn-hvr);
-    color: white;
-    border-color: var(--color-btn-hvr);
+.catalog:has(#cat-hogar:target):not(:has(.filters input:checked)) .card:not([data-category="hogar"]),
+.catalog:has(#cat-moda:target):not(:has(.filters input:checked)) .card:not([data-category="moda"]),
+.catalog:has(#cat-cuidado-personal:target):not(:has(.filters input:checked)) .card:not([data-category="cuidado-personal"]),
+.catalog:has(#cat-alimentos:target):not(:has(.filters input:checked)) .card:not([data-category="alimentos"]) {
+    display: none;
 }
 
 
@@ -741,6 +762,26 @@
 
 .footer-section a:hover {
     color: hsl(120, 50%, 70%);
+}
+
+/* Iconos PNG de redes sociales en el footer
+   (fondo oscuro → invertimos los iconos negros a blanco) */
+.social-link img {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+    filter: invert(1);
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.social-link:hover img {
+    transform: scale(1.2);
+    filter: invert(72%) sepia(35%) saturate(680%) hue-rotate(75deg) brightness(92%);
+}
+
+/* Evitar el ::after subrayado del footer-section a en los enlaces sociales */
+.social-link:hover::after {
+    content: none;
 }
 
 .footer-section a:hover::after,

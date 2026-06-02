@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoMarket - Productos</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/components.css">
@@ -28,11 +29,6 @@
                 <hr>
                 <a href="/views/contacto.html">Contáctanos</a>
                 <hr>
-            </div>
-
-            <div class="stuff-container">
-                <button><span aria-hidden="true">🔎</span> Buscar</button>
-                <button><span aria-hidden="true">🛒</span> Carrito</button>
             </div>
         </nav>
     </header>
@@ -75,274 +71,324 @@
         </aside>
 
         <div class="catalog-main">
-            <div class="search-bar">
-                <input type="search" class="search-input" placeholder="Buscar productos ecológicos...">
-                <button class="search-button" type="button" aria-label="Buscar">⌕</button>
-            </div>
-
             <section class="catalog-grid">
-                <article class="card" id="prod-1" data-category="hogar" data-stock="in" data-price="price-mid">
+                <article class="card" id="prod-1" data-category="hogar" data-stock="in" data-price="price-low">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto1.jpg">
+                        <img src="/img/products/producto1.png">
                         <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-1" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        <span class="product-tag">Hogar</span>
                     </div>
                     <div class="card-info">
-                        <h3>Plato de bambú</h3>
-                        <p>Plato reutilizable de bambú natural</p>
-                        <span class="precio">$25.000</span>
-                    </div>
-                </article>
-
-                <article class="card" id="prod-2" data-category="hogar" data-stock="in" data-price="price-mid">
-                    <div class="card-img-wrap">
-                        <img src="/img/products/producto2.jpg">
-                        <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-2" class="card-fav" aria-label="Marcar como favorito">♥</a>
-                    </div>
-                    <div class="card-info">
-                        <h3>Set de cubiertos</h3>
-                        <p>Cubiertos de madera para llevar</p>
-                        <span class="precio">$32.000</span>
-                    </div>
-                </article>
-
-                <article class="card" id="prod-3" data-category="hogar" data-stock="out" data-price="price-mid">
-                    <div class="card-img-wrap">
-                        <img src="/img/products/producto3.jpg">
-                        <span class="card-stock out-stock">Agotado</span>
-                        <a href="#prod-3" class="card-fav" aria-label="Marcar como favorito">♥</a>
-                    </div>
-                    <div class="card-info">
-                        <h3>Plato hondo de cerámica</h3>
-                        <p>Cerámica artesanal sin esmalte tóxico</p>
-                        <span class="precio">$38.000</span>
-                    </div>
-                </article>
-
-                <article class="card" id="prod-4" data-category="hogar" data-stock="in" data-price="price-mid">
-                    <div class="card-img-wrap">
-                        <img src="/img/products/producto4.jpg">
-                        <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-4" class="card-fav" aria-label="Marcar como favorito">♥</a>
-                    </div>
-                    <div class="card-info">
-                        <h3>Tabla de servir</h3>
-                        <p>Tabla de bambú para tapas y quesos</p>
-                        <span class="precio">$45.000</span>
-                    </div>
-                </article>
-
-                <article class="card" id="prod-5" data-category="hogar" data-stock="in" data-price="price-low">
-                    <div class="card-img-wrap">
-                        <img src="/img/products/producto6.jpg">
-                        <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-5" class="card-fav" aria-label="Marcar como favorito">♥</a>
-                    </div>
-                    <div class="card-info">
-                        <h3>Vaso de vidrio reciclado</h3>
-                        <p>Vaso artesanal hecho con vidrio reciclado</p>
-                        <span class="precio">$18.000</span>
-                    </div>
-                </article>
-
-                <article class="card" id="prod-6" data-category="hogar" data-stock="in" data-price="price-mid">
-                    <div class="card-img-wrap">
-                        <img src="/img/products/producto7.jpg">
-                        <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-6" class="card-fav" aria-label="Marcar como favorito">♥</a>
-                    </div>
-                    <div class="card-info">
-                        <h3>Taza de bambú</h3>
-                        <p>Taza para café reutilizable</p>
-                        <span class="precio">$22.000</span>
-                    </div>
-                </article>
-
-                <article class="card" id="prod-7" data-category="hogar" data-stock="in" data-price="price-mid">
-                    <div class="card-img-wrap">
-                        <img src="/img/products/producto8.jpg">
-                        <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-7" class="card-fav" aria-label="Marcar como favorito">♥</a>
-                    </div>
-                    <div class="card-info">
-                        <h3>Vaso térmico</h3>
-                        <p>Mantiene la temperatura por 6 horas</p>
-                        <span class="precio">$48.000</span>
-                    </div>
-                </article>
-
-                <article class="card" id="prod-8" data-category="hogar" data-stock="out" data-price="price-mid">
-                    <div class="card-img-wrap">
-                        <img src="/img/products/producto9.jpg">
-                        <span class="card-stock out-stock">Agotado</span>
-                        <a href="#prod-8" class="card-fav" aria-label="Marcar como favorito">♥</a>
-                    </div>
-                    <div class="card-info">
-                        <h3>Pocillo cerámico</h3>
-                        <p>Pocillo pintado a mano por artesanos locales</p>
-                        <span class="precio">$28.000</span>
-                    </div>
-                </article>
-
-                <article class="card" id="prod-9" data-category="moda" data-stock="in" data-price="price-mid">
-                    <div class="card-img-wrap">
-                        <img src="/img/products/producto11.jpg">
-                        <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-9" class="card-fav" aria-label="Marcar como favorito">♥</a>
-                    </div>
-                    <div class="card-info">
-                        <h3>Bolso de yute</h3>
-                        <p>Bolso reutilizable para el mercado</p>
-                        <span class="precio">$35.000</span>
-                    </div>
-                </article>
-
-                <article class="card" id="prod-10" data-category="moda" data-stock="in" data-price="price-premium">
-                    <div class="card-img-wrap">
-                        <img src="/img/products/producto12.jpg">
-                        <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-10" class="card-fav" aria-label="Marcar como favorito">♥</a>
-                    </div>
-                    <div class="card-info">
-                        <h3>Mochila eco</h3>
-                        <p>Hecha con botellas recicladas</p>
-                        <span class="precio">$120.000</span>
-                    </div>
-                </article>
-
-                <article class="card" id="prod-11" data-category="moda" data-stock="in" data-price="price-high">
-                    <div class="card-img-wrap">
-                        <img src="/img/products/producto13.jpg">
-                        <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-11" class="card-fav" aria-label="Marcar como favorito">♥</a>
-                    </div>
-                    <div class="card-info">
-                        <h3>Cartera de algodón</h3>
-                        <p>Algodón orgánico certificado</p>
-                        <span class="precio">$55.000</span>
-                    </div>
-                </article>
-
-                <article class="card" id="prod-12" data-category="moda" data-stock="in" data-price="price-low">
-                    <div class="card-img-wrap">
-                        <img src="/img/products/producto14.jpg">
-                        <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-12" class="card-fav" aria-label="Marcar como favorito">♥</a>
-                    </div>
-                    <div class="card-info">
-                        <h3>Bolsa de tela plegable</h3>
-                        <p>Compacta, ideal para llevar siempre contigo</p>
+                        <div class="card-header">
+                            <h3>Cepillo de bambú</h3>
+                            <a href="#prod-1" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Cepillo de cocina con mango de bambú y cerdas naturales</p>
                         <span class="precio">$15.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-13" data-category="cuidado-personal" data-stock="in"
-                    data-price="price-low">
+                <article class="card" id="prod-2" data-category="cuidado-personal" data-stock="in" data-price="price-high">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto16.jpg">
+                        <img src="/img/products/producto2.png">
                         <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-13" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        <span class="product-tag">Cuidado</span>
                     </div>
                     <div class="card-info">
-                        <h3>Cepillo de bambú</h3>
-                        <p>Cerdas biodegradables, mango natural</p>
-                        <span class="precio">$8.000</span>
+                        <div class="card-header">
+                            <h3>Eco-Essential Kit</h3>
+                            <a href="#prod-2" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Set con peine, cepillos, discos reutilizables e hisopos de bambú</p>
+                        <span class="precio">$75.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-14" data-category="cuidado-personal" data-stock="in"
-                    data-price="price-mid">
+                <article class="card" id="prod-3" data-category="hogar" data-stock="in" data-price="price-high">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto17.jpg">
+                        <img src="/img/products/producto3.png">
                         <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-14" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        <span class="product-tag">Hogar</span>
                     </div>
                     <div class="card-info">
-                        <h3>Pack 4 cepillos</h3>
-                        <p>Ahorra comprando en pack familiar</p>
+                        <div class="card-header">
+                            <h3>Eco-Organizers</h3>
+                            <a href="#prod-3" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Frascos de vidrio y soportes de bambú para una cocina ordenada</p>
+                        <span class="precio">$85.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-4" data-category="moda" data-stock="in" data-price="price-premium">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto4.png">
+                        <span class="card-stock in-stock">En stock</span>
+                        <span class="product-tag">Moda</span>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Organic Wardrobe</h3>
+                            <a href="#prod-4" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Cápsula de prendas en algodón orgánico, tonos neutros atemporales</p>
+                        <span class="precio">$135.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-5" data-category="moda" data-stock="in" data-price="price-mid">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto5.png">
+                        <span class="card-stock in-stock">En stock</span>
+                        <span class="product-tag">Moda</span>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Skirt Remade</h3>
+                            <a href="#prod-5" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Falda única hecha con jean reciclado y corbatas vintage</p>
+                        <span class="precio">$45.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-6" data-category="moda" data-stock="in" data-price="price-high">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto6.png">
+                        <span class="card-stock in-stock">En stock</span>
+                        <span class="product-tag">Moda</span>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Free-Happy Set</h3>
+                            <a href="#prod-6" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Conjunto camisa y pantalón en lino, fresco y atemporal</p>
+                        <span class="precio">$90.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-7" data-category="cuidado-personal" data-stock="in" data-price="price-low">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto7.png">
+                        <span class="card-stock in-stock">En stock</span>
+                        <span class="product-tag">Cuidado</span>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>NatEssence Soap</h3>
+                            <a href="#prod-7" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Jabones artesanales con esencias de lavanda, naranja y rosa</p>
+                        <span class="precio">$14.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-8" data-category="cuidado-personal" data-stock="in" data-price="price-low">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto8.png">
+                        <span class="card-stock in-stock">En stock</span>
+                        <span class="product-tag">Cuidado</span>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Bamboo Toothbrush</h3>
+                            <a href="#prod-8" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Cepillo dental 100% biodegradable, cerdas suaves de carbón</p>
+                        <span class="precio">$9.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-9" data-category="cuidado-personal" data-stock="in" data-price="price-high">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto9.png">
+                        <span class="card-stock in-stock">En stock</span>
+                        <span class="product-tag">Cuidado</span>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Sryhe's Skincare</h3>
+                            <a href="#prod-9" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Rutina facial completa con ingredientes naturales certificados</p>
+                        <span class="precio">$85.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-10" data-category="moda" data-stock="in" data-price="price-high">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto10.png">
+                        <span class="card-stock in-stock">En stock</span>
+                        <span class="product-tag">Moda</span>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Bio Make-up Set</h3>
+                            <a href="#prod-10" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Maquillaje bio con brochas de bambú y empaques compostables</p>
+                        <span class="precio">$80.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-11" data-category="moda" data-stock="in" data-price="price-premium">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto11.jpg">
+                        <span class="card-stock in-stock">En stock</span>
+                        <span class="product-tag">Moda</span>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Bio Bag</h3>
+                            <a href="#prod-11" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Bolso tejido en cuero vegetal con cadena dorada</p>
+                        <span class="precio">$120.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-12" data-category="alimentos" data-stock="in" data-price="price-low">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto12.png">
+                        <span class="card-stock in-stock">En stock</span>
+                        <span class="product-tag">Alimentos</span>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Malla Orgánica</h3>
+                            <a href="#prod-12" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Malla reutilizable para frutas y verduras del mercado</p>
+                        <span class="precio">$12.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-13" data-category="alimentos" data-stock="in" data-price="price-mid">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto13.png">
+                        <span class="card-stock in-stock">En stock</span>
+                        <span class="product-tag">Alimentos</span>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Natura Spreads</h3>
+                            <a href="#prod-13" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Surtido de untables artesanales: frutos secos, frutas y semillas</p>
+                        <span class="precio">$35.000</span>
+                    </div>
+                </article>
+
+                <article class="card" id="prod-14" data-category="hogar" data-stock="in" data-price="price-mid">
+                    <div class="card-img-wrap">
+                        <img src="/img/products/producto14.png">
+                        <span class="card-stock in-stock">En stock</span>
+                        <span class="product-tag">Hogar</span>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Bio Packaging</h3>
+                            <a href="#prod-14" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Envases compostables de cartón kraft para servir y llevar</p>
                         <span class="precio">$28.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-15" data-category="cuidado-personal" data-stock="out"
-                    data-price="price-low">
+                <article class="card" id="prod-15" data-category="alimentos" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto18.jpg">
-                        <span class="card-stock out-stock">Agotado</span>
-                        <a href="#prod-15" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        <img src="/img/products/producto15.png">
+                        <span class="card-stock in-stock">En stock</span>
+                        <span class="product-tag">Alimentos</span>
                     </div>
                     <div class="card-info">
-                        <h3>Cepillo infantil</h3>
-                        <p>Diseño suave especial para niños</p>
-                        <span class="precio">$10.000</span>
+                        <div class="card-header">
+                            <h3>Eco Stofa</h3>
+                            <a href="#prod-15" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Granel orgánico: cereales, granos y frutos secos a la medida</p>
+                        <span class="precio">$40.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-16" data-category="cuidado-personal" data-stock="in"
-                    data-price="price-low">
+                <article class="card" id="prod-16" data-category="hogar" data-stock="in" data-price="price-high">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto19.jpg">
+                        <img src="/img/products/producto16.png">
                         <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-16" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        <span class="product-tag">Hogar</span>
                     </div>
                     <div class="card-info">
-                        <h3>Hilo dental de seda</h3>
-                        <p>Sin plástico, en frasco recargable</p>
-                        <span class="precio">$14.000</span>
+                        <div class="card-header">
+                            <h3>Sryhe's CleanKit</h3>
+                            <a href="#prod-16" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Kit completo con limpiador multiusos, cepillo y esponja vegetal</p>
+                        <span class="precio">$55.000</span>
                     </div>
                 </article>
 
                 <article class="card" id="prod-17" data-category="hogar" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto21.jpg">
+                        <img src="/img/products/producto17.png">
                         <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-17" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        <span class="product-tag">Hogar</span>
                     </div>
                     <div class="card-info">
-                        <h3>Botella 500ml</h3>
-                        <p>Acero inoxidable, libre de BPA</p>
-                        <span class="precio">$42.000</span>
+                        <div class="card-header">
+                            <h3>Sryhe's SojaVeil</h3>
+                            <a href="#prod-17" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Vela de soja natural aroma lavanda, dura 35-40 horas</p>
+                        <span class="precio">$30.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-18" data-category="hogar" data-stock="in" data-price="price-high">
+                <article class="card" id="prod-18" data-category="moda" data-stock="in" data-price="price-low">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto22.jpg">
+                        <img src="/img/products/producto18.png">
                         <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-18" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        <span class="product-tag">Moda</span>
                     </div>
                     <div class="card-info">
-                        <h3>Botella 750ml</h3>
-                        <p>Térmica, doble pared</p>
-                        <span class="precio">$58.000</span>
+                        <div class="card-header">
+                            <h3>Eco-Shopping bag</h3>
+                            <a href="#prod-18" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Bolsa de algodón crudo reutilizable para tus compras diarias</p>
+                        <span class="precio">$18.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-19" data-category="hogar" data-stock="in" data-price="price-high">
+                <article class="card" id="prod-19" data-category="hogar" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto23.jpg">
+                        <img src="/img/products/producto19.png">
                         <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-19" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        <span class="product-tag">Hogar</span>
                     </div>
                     <div class="card-info">
-                        <h3>Botella deportiva</h3>
-                        <p>Con boquilla y correa</p>
-                        <span class="precio">$65.000</span>
+                        <div class="card-header">
+                            <h3>Sryhe's Study Kit</h3>
+                            <a href="#prod-19" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Cuaderno y bolígrafo de bambú para ideas más sostenibles</p>
+                        <span class="precio">$35.000</span>
                     </div>
                 </article>
 
-                <article class="card" id="prod-20" data-category="cuidado-personal" data-stock="in"
-                    data-price="price-high">
+                <article class="card" id="prod-20" data-category="hogar" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
-                        <img src="/img/products/producto26.jpg">
+                        <img src="/img/products/producto20.png">
                         <span class="card-stock in-stock">En stock</span>
-                        <a href="#prod-20" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        <span class="product-tag">Hogar</span>
                     </div>
                     <div class="card-info">
-                        <h3>Kit baño completo</h3>
-                        <p>Champú sólido, cepillo y jabón</p>
-                        <span class="precio">$95.000</span>
+                        <div class="card-header">
+                            <h3>Sryhe's Termic Bottle</h3>
+                            <a href="#prod-20" class="card-fav" aria-label="Marcar como favorito">♥</a>
+                        </div>
+                        <p>Botella térmica con tapa de bambú, mantiene la temperatura</p>
+                        <span class="precio">$45.000</span>
                     </div>
                 </article>
             </section>

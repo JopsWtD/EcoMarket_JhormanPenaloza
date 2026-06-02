@@ -631,13 +631,21 @@
     color: hsl(120, 5%, 35%);
 }
 
-/* Filtrado CSS puro vía :has() + checkboxes */
-.catalog:has(#filter-hogar:not(:checked)) .card[data-category="hogar"],
-.catalog:has(#filter-moda:not(:checked)) .card[data-category="moda"],
-.catalog:has(#filter-cuidado:not(:checked)) .card[data-category="cuidado-personal"],
-.catalog:has(#filter-alimentos:not(:checked)) .card[data-category="alimentos"],
+
+.catalog:has(#filter-todos:checked) .blocked-checkbox {
+    cursor: not-allowed;
+}
+
+.catalog:has(#filter-todos:not(:checked)):has(#filter-hogar:not(:checked)) .card[data-category="hogar"],
+.catalog:has(#filter-todos:not(:checked)):has(#filter-moda:not(:checked)) .card[data-category="moda"],
+.catalog:has(#filter-todos:not(:checked)):has(#filter-cuidado:not(:checked)) .card[data-category="cuidado-personal"],
+.catalog:has(#filter-todos:not(:checked)):has(#filter-alimentos:not(:checked)) .card[data-category="alimentos"],
 .catalog:has(#filter-instock:not(:checked)) .card[data-stock="in"],
-.catalog:has(#filter-outstock:not(:checked)) .card[data-stock="out"] {
+.catalog:has(#filter-outstock:not(:checked)) .card[data-stock="out"],
+.catalog:has(#price-low:not(:checked)) .card[data-price="price-low"],
+.catalog:has(#price-mid:not(:checked)) .card[data-price="price-mid"],
+.catalog:has(#price-high:not(:checked)) .card[data-price="price-high"],
+.catalog:has(#price-premium:not(:checked)) .card[data-price="price-premium"] {
     display: none;
 }
 

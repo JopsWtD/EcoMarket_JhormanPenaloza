@@ -42,20 +42,27 @@
             <div class="filters-block">
                 <h3 class="filters-title">Categorías</h3>
                 <ul class="filters-list">
-                    <li><label><input type="checkbox" id="filter-hogar" checked> Hogar</label></li>
-                    <li><label><input type="checkbox" id="filter-moda" checked> Moda</label></li>
-                    <li><label><input type="checkbox" id="filter-cuidado" checked> Cuidado Personal</label></li>
-                    <li><label><input type="checkbox" id="filter-alimentos" checked> Alimentos</label></li>
+                    <li><label><input type="checkbox" id="filter-todos" checked>Todos</label></li>
+                    <li><label><input type="checkbox" class="blocked-checkbox" id="filter-hogar" checked>Hogar</label>
+                    </li>
+                    <li><label><input type="checkbox" class="blocked-checkbox" id="filter-moda" checked>Moda</label>
+                    </li>
+                    <li><label><input type="checkbox" class="blocked-checkbox" id="filter-cuidado" checked>Cuidado
+                            Personal</label>
+                    </li>
+                    <li><label><input type="checkbox" class="blocked-checkbox" id="filter-alimentos"
+                                checked>Alimentos</label></li>
                 </ul>
             </div>
 
             <div class="filters-block">
                 <h3 class="filters-title">Rango de precio</h3>
-                <input type="range" min="0" max="200000" step="1000" class="filters-range">
-                <div class="filters-range-labels">
-                    <span>$0</span>
-                    <span>$200.000</span>
-                </div>
+                <ul class="filters-list">
+                    <li><label><input type="checkbox" id="price-low" checked>$0 - $20.000</label></li>
+                    <li><label><input type="checkbox" id="price-mid" checked>$20.000 – $50.000</label></li>
+                    <li><label><input type="checkbox" id="price-high" checked>$50.000 – $100.000</label></li>
+                    <li><label><input type="checkbox" id="price-premium" checked>$100.000 - $200.000</label></li>
+                </ul>
             </div>
 
             <div class="filters-block">
@@ -74,7 +81,7 @@
             </div>
 
             <section class="catalog-grid">
-                <article class="card" id="prod-1" data-category="hogar" data-stock="in">
+                <article class="card" id="prod-1" data-category="hogar" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto1.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -87,7 +94,7 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-2" data-category="hogar" data-stock="in">
+                <article class="card" id="prod-2" data-category="hogar" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto2.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -100,7 +107,7 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-3" data-category="hogar" data-stock="out">
+                <article class="card" id="prod-3" data-category="hogar" data-stock="out" data-price="price-mid">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto3.jpg">
                         <span class="card-stock out-stock">Agotado</span>
@@ -113,7 +120,7 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-4" data-category="hogar" data-stock="in">
+                <article class="card" id="prod-4" data-category="hogar" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto4.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -126,7 +133,7 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-5" data-category="hogar" data-stock="in">
+                <article class="card" id="prod-5" data-category="hogar" data-stock="in" data-price="price-low">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto6.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -139,7 +146,7 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-6" data-category="hogar" data-stock="in">
+                <article class="card" id="prod-6" data-category="hogar" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto7.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -152,7 +159,7 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-7" data-category="hogar" data-stock="in">
+                <article class="card" id="prod-7" data-category="hogar" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto8.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -165,7 +172,7 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-8" data-category="hogar" data-stock="out">
+                <article class="card" id="prod-8" data-category="hogar" data-stock="out" data-price="price-mid">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto9.jpg">
                         <span class="card-stock out-stock">Agotado</span>
@@ -178,7 +185,7 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-9" data-category="moda" data-stock="in">
+                <article class="card" id="prod-9" data-category="moda" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto11.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -191,7 +198,7 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-10" data-category="moda" data-stock="in">
+                <article class="card" id="prod-10" data-category="moda" data-stock="in" data-price="price-premium">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto12.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -204,7 +211,7 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-11" data-category="moda" data-stock="in">
+                <article class="card" id="prod-11" data-category="moda" data-stock="in" data-price="price-high">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto13.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -217,7 +224,7 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-12" data-category="moda" data-stock="in">
+                <article class="card" id="prod-12" data-category="moda" data-stock="in" data-price="price-low">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto14.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -230,7 +237,8 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-13" data-category="cuidado-personal" data-stock="in">
+                <article class="card" id="prod-13" data-category="cuidado-personal" data-stock="in"
+                    data-price="price-low">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto16.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -243,7 +251,8 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-14" data-category="cuidado-personal" data-stock="in">
+                <article class="card" id="prod-14" data-category="cuidado-personal" data-stock="in"
+                    data-price="price-mid">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto17.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -256,7 +265,8 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-15" data-category="cuidado-personal" data-stock="out">
+                <article class="card" id="prod-15" data-category="cuidado-personal" data-stock="out"
+                    data-price="price-low">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto18.jpg">
                         <span class="card-stock out-stock">Agotado</span>
@@ -269,7 +279,8 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-16" data-category="cuidado-personal" data-stock="in">
+                <article class="card" id="prod-16" data-category="cuidado-personal" data-stock="in"
+                    data-price="price-low">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto19.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -282,7 +293,7 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-17" data-category="hogar" data-stock="in">
+                <article class="card" id="prod-17" data-category="hogar" data-stock="in" data-price="price-mid">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto21.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -295,7 +306,7 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-18" data-category="hogar" data-stock="in">
+                <article class="card" id="prod-18" data-category="hogar" data-stock="in" data-price="price-high">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto22.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -308,7 +319,7 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-19" data-category="hogar" data-stock="in">
+                <article class="card" id="prod-19" data-category="hogar" data-stock="in" data-price="price-high">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto23.jpg">
                         <span class="card-stock in-stock">En stock</span>
@@ -321,7 +332,8 @@
                     </div>
                 </article>
 
-                <article class="card" id="prod-20" data-category="cuidado-personal" data-stock="in">
+                <article class="card" id="prod-20" data-category="cuidado-personal" data-stock="in"
+                    data-price="price-high">
                     <div class="card-img-wrap">
                         <img src="/img/products/producto26.jpg">
                         <span class="card-stock in-stock">En stock</span>

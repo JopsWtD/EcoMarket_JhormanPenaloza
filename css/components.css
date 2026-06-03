@@ -26,6 +26,15 @@ filtros, paginación y elementos decorativos
     color: var(--color-btn-hvr);
 }
 
+.ref-container #active {
+    color: hsl(120, 100%, 40%);
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+}
+
+#active:hover::after {
+    animation: none;
+}
 
 /* --- Hero / Headings de página --- */
 #titulo {
@@ -484,8 +493,8 @@ filtros, paginación y elementos decorativos
     font-size: 3rem;
     position: absolute;
     width: 0;
-    top: 30%;
-    left: 25%;
+    top: 28%;
+    left: 18%;
     color: hsl(120, 100%, 30%);
     overflow: hidden;
     white-space: nowrap;
@@ -497,8 +506,8 @@ filtros, paginación y elementos decorativos
     width: 0;
     font-size: 1.8rem;
     position: absolute;
-    bottom: 30%;
-    left: 30%;
+    bottom: 25%;
+    left: 25%;
     color: hsl(120, 100%, 40%);
     overflow: hidden;
     white-space: nowrap;
@@ -857,6 +866,16 @@ filtros, paginación y elementos decorativos
 
     .about-hero-desc {
         font-size: 1.15rem;
+    }
+
+    .history-title {
+        top: 30%;
+        left: 25%;
+    }
+
+    .history-context {
+        bottom: 34%;
+        left: 31%;
     }
 
     .contact-intro-title {

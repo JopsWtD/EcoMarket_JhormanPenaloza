@@ -580,7 +580,7 @@
     color: hsl(120, 100%, 30%);
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 2s steps(40) forwards 4s;
+    animation: typing 2s steps(40) forwards 3.5s;
 }
 
 .history-context {
@@ -592,7 +592,7 @@
     color: hsl(120, 100%, 40%);
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 2s steps(40) forwards 6s;
+    animation: typing 2s steps(40) forwards 5.5s;
 }
 
 .history-text p {

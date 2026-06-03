@@ -294,6 +294,7 @@
         grid-template-areas: "logo ref stuff";
         padding: 0.5rem 0rem;
         height: auto;
+        justify-content: space-between;
     }
 
     .logo-container {
@@ -303,6 +304,9 @@
     .ref-container {
         gap: 1rem;
         justify-content: center;
+        position: static;
+        border: none;
+        width: auto;
     }
 
     .main-nav hr {
@@ -369,8 +373,6 @@
     }
 
     .ref-container {
-        border: none;
-        position: static;
         grid-area: ref;
         display: flex;
         flex-wrap: wrap;

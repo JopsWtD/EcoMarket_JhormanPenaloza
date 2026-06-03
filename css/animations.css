@@ -59,3 +59,26 @@
         transform: translateY(0);
     }
 }
+
+
+@keyframes rainbowTag {
+    0% {
+        background-position: 0% 50%;
+        opacity: 0.9;
+    }
+
+    50% {
+        background-position: 100% 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}

@@ -32,7 +32,7 @@ Control de versiones	**Git + GitHub** (workflow con ramas feature/* y Convention
 Capturas de pantalla
 | Sección | Vista Escritorio | Vista Móvil |
 | :---: | :---: | :---: |
-| **Inicio** | ![Escritorio] (/img/screenshots/index1.png) (/img/screenshots/index2.png)| ![Móvil] (/img/screenshots/index3.png) |
-| **Productos** | ![Escritorio] (/img/screenshots/catalog1.png) | ![Móvil] (/img/screenshots/catalog2.png) |
-| **Nosotros** | ![Escritorio] (/img/screenshots/about-us1.png) (/img/screenshots/about-us2.png) | ![Móvil] (/img/screenshots/about-us3.png) (/img/screenshots/about-us4.png)|
-| **Contacto** | ![Escritorio] (/img/screenshots/contact1.png) | ![Móvil] (/img/screenshots/contact2.png) |
+| **Inicio** | ![Escritorio](img/screenshots/index1.png)| ![Móvil](img/screenshots/index3.png) |
+| **Productos** | ![Escritorio](img/screenshots/catalog1.png) | ![Móvil](img/screenshots/catalog2.png) |
+| **Nosotros** | ![Escritorio](img/screenshots/about-us1.png) | ![Móvil](img/screenshots/about-us3.png) |
+| **Contacto** | ![Escritorio](img/screenshots/contact1.png) | ![Móvil](img/screenshots/contact2.png) |

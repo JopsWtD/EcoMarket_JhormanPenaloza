@@ -1,21 +1,22 @@
 /* =========================
-   COMPONENTS - Mobile First
-   Tipografía de secciones, botones, cards, formularios,
-   filtros, paginación y elementos decorativos
+COMPONENTS - Mobile First
+Tipografía de secciones, botones, cards, formularios,
+filtros, paginación y elementos decorativos
    ========================= */
 
 
 /* --- Navegación --- */
 #logo {
+    padding-inline-start: 3rem;
     height: 100%;
-    max-height: 3rem;
-    width: auto;
+    max-height: fit-content;
+    width: 15rem;
     object-fit: contain;
 }
 
 .ref-container a {
-    position: relative;
-    font-size: 0.9rem;
+    padding-block: 1.5rem;
+    font-size: 0.8rem;
     color: var(--color-text);
     text-decoration: none;
     white-space: nowrap;
@@ -727,15 +728,6 @@
     display: none;
 }
 
-
-/* === Filtro por URL hash (al venir de "Ver más" en la home) ===
-   Los anchors invisibles #cat-X dentro de .catalog reciben :target
-   cuando la URL trae el hash correspondiente. Mediante :has() la
-   condición sube al .catalog y se ocultan las cards que no son de
-   esa categoría.
-
-   Se desactiva en cuanto el usuario interactúa con CUALQUIER filtro
-   del sidebar; a partir de ahí manda la lógica de checkboxes. */
 .cat-anchor {
     position: absolute;
     width: 0;
@@ -855,8 +847,17 @@
    Desktop (>=1024px)
    ========================= */
 @media (min-width: 1024px) {
+
     .ref-container a {
-        font-size: 0.95rem;
+        position: relative;
+        font-size: 1.15rem;
+        color: var(--color-text);
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .ref-container a:hover::after {
+        top: 45%;
     }
 
     #titulo {

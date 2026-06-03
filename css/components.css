@@ -1,11 +1,9 @@
-/* =========================
-COMPONENTS - Mobile First
-Tipografía de secciones, botones, cards, formularios,
-filtros, paginación y elementos decorativos
-   ========================= */
+/* Mobile First */
 
 
-/* --- Navegación --- */
+/* COSAS EN COMÚN */
+
+/* Nav */
 #logo {
     padding-inline-start: 3rem;
     height: 100%;
@@ -36,61 +34,26 @@ filtros, paginación y elementos decorativos
     animation: none;
 }
 
-/* --- Hero / Headings de página --- */
-#titulo {
-    font-weight: bolder;
-    font-size: 2rem;
-    line-height: 1.3;
-}
-
-.hero-desc {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-}
-
-.hero-desc p {
-    max-width: 70ch;
-    font-size: 1rem;
-}
-
-.about-hero-title {
-    font-size: 1.8rem;
-    font-weight: bolder;
-    text-shadow: 0.125rem 0.125rem 0.3125rem rgb(28, 137, 57);
-    line-height: 1.3;
-}
-
-.about-hero-desc {
-    font-size: 1rem;
-}
-
+/* Heros de página*/
+.about-hero-title,
 .contact-intro-title {
     font-size: 1.8rem;
     font-weight: bolder;
     text-shadow: 0.125rem 0.125rem 0.3125rem rgb(28, 137, 57);
     line-height: 1.3;
+}
+
+.contact-intro-title {
     max-width: 20ch;
+}
+
+.about-hero-desc,
+.contact-intro-desc {
+    font-size: 1rem;
 }
 
 .contact-intro-desc {
     max-width: 40ch;
-    font-size: 1rem;
-}
-
-.contact-intro-line {
-    display: block;
-    width: 0.18rem;
-    height: 0;
-    background: linear-gradient(to bottom, white, var(--color-btn-hvr));
-    border-radius: 1rem;
-    transform-origin: top;
-}
-
-.contact-intro:hover .contact-intro-line {
-    animation: drawLine 0.7s ease-out forwards;
-    animation-delay: var(--line-delay, 0s);
 }
 
 .section-title {
@@ -104,79 +67,7 @@ filtros, paginación y elementos decorativos
     font-size: 1.3rem;
 }
 
-
-/* --- Botones --- */
-.cta-button {
-    position: relative;
-    display: inline-block;
-    color: var(--color-btn-hvr);
-    padding: 0.8rem 1.5rem;
-    background-color: white;
-    border-radius: 1rem;
-    border: 1px solid hsl(120, 100%, 40%);
-    outline: 3px solid hsl(120, 100%, 40%);
-    outline-offset: 0.14rem;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.cta-button:hover {
-    animation: bigsmall 1.5s infinite;
-}
-
-.cta-button:active {
-    animation: none;
-    transform: translateY(2px) scale(0.95);
-    box-shadow: 3px 3px 5px 5px hsl(120, 100%, 30%);
-}
-
-.cta-button::before {
-    content: "";
-    position: absolute;
-    height: 4rem;
-    width: 8rem;
-    left: 50%;
-    top: 50%;
-    border-radius: 5rem;
-    border: 3px solid rgba(0, 255, 0, 0.5);
-    opacity: 0;
-}
-
-.cta-button:focus::before {
-    animation: pulse 0.3s ease-out;
-}
-
-.contact-intro-button {
-    display: inline-block;
-    color: var(--color-btn-hvr);
-    padding: 0.8rem 1.75rem;
-    background-color: white;
-    border-radius: 1rem;
-    border: 1px solid hsl(120, 100%, 40%);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.card-button {
-    align-self: flex-start;
-    margin-top: 0.4rem;
-    color: white;
-    background-color: var(--color-btn-hvr);
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: bold;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.card-button:hover {
-    background-color: hsl(120, 100%, 35%);
-    transform: scale(1.05);
-}
-
-
-/* --- Cards de producto --- */
+/* Cards base*/
 .card {
     border-radius: 0.5rem;
     overflow: hidden;
@@ -223,6 +114,133 @@ filtros, paginación y elementos decorativos
     color: var(--color-btn-hvr);
 }
 
+.footer-section a {
+    position: relative;
+    color: hsl(120, 5%, 80%);
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.footer-section a:hover {
+    color: hsl(120, 50%, 70%);
+}
+
+.footer-section a:hover::after,
+.ref-container a:hover::after {
+    content: "";
+    position: absolute;
+    height: 1rem;
+    width: 0.1rem;
+    left: 0%;
+    top: 17%;
+    border-bottom: 0.1rem solid hsl(120, 50%, 60%);
+    animation: movingline 0.5s ease forwards;
+}
+
+.ref-container a:hover::after {
+    top: 10%;
+}
+
+.footer-title {
+    color: white;
+}
+
+.social-link img {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+    filter: invert(1);
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.social-link:hover img {
+    transform: scale(1.2);
+    filter: invert(72%) sepia(35%) saturate(680%) hue-rotate(75deg) brightness(92%);
+}
+
+.social-link:hover::after {
+    content: none;
+}
+
+
+/*index.html*/
+
+#titulo {
+    font-weight: bolder;
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+.hero-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.hero-desc p {
+    max-width: 70ch;
+    font-size: 1rem;
+}
+
+.cta-button {
+    position: relative;
+    display: inline-block;
+    color: var(--color-btn-hvr);
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px solid hsl(120, 100%, 40%);
+    outline: 3px solid hsl(120, 100%, 40%);
+    outline-offset: 0.14rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    animation: bigsmall 1.5s infinite;
+}
+
+.cta-button:active {
+    animation: none;
+    transform: translateY(2px) scale(0.95);
+    box-shadow: 3px 3px 5px 5px hsl(120, 100%, 30%);
+}
+
+.cta-button::before {
+    content: "";
+    position: absolute;
+    height: 4rem;
+    width: 8rem;
+    left: 50%;
+    top: 50%;
+    border-radius: 5rem;
+    border: 3px solid rgba(0, 255, 0, 0.5);
+    opacity: 0;
+}
+
+.cta-button:focus::before {
+    animation: pulse 0.3s ease-out;
+}
+
+.card-button {
+    align-self: flex-start;
+    margin-top: 0.4rem;
+    color: white;
+    background-color: var(--color-btn-hvr);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.card-button:hover {
+    background-color: hsl(120, 100%, 35%);
+    transform: scale(1.05);
+}
+
 .card-tag {
     position: absolute;
     top: 0;
@@ -257,6 +275,9 @@ filtros, paginación y elementos decorativos
     z-index: 1;
 }
 
+
+/*productos.html*/
+
 .card-stock {
     position: absolute;
     top: 0.5rem;
@@ -277,7 +298,6 @@ filtros, paginación y elementos decorativos
     background-color: #e74c3c;
 }
 
-/* Header del card-info: título + corazón en una sola fila */
 .card-header {
     display: flex;
     align-items: flex-start;
@@ -292,8 +312,6 @@ filtros, paginación y elementos decorativos
     flex: 1;
 }
 
-/* Botón corazón — checkbox oculto dentro del <label> que persiste el estado
-   sin JavaScript, sin hash en la URL y permite tantos favoritos como quieras. */
 .card-fav {
     position: relative;
     display: flex;
@@ -311,7 +329,6 @@ filtros, paginación y elementos decorativos
     transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* checkbox invisible pero sigue siendo focuseable con teclado */
 .card-fav-toggle {
     position: absolute;
     width: 1px;
@@ -327,7 +344,6 @@ filtros, paginación y elementos decorativos
     box-shadow: 0 2px 8px rgba(231, 76, 60, 0.25);
 }
 
-/* Estado favorito: clic toggleó el checkbox interno */
 .card-fav:has(.card-fav-toggle:checked) {
     color: #e74c3c;
     background-color: white;
@@ -335,14 +351,11 @@ filtros, paginación y elementos decorativos
     animation: bigsmall 0.4s ease;
 }
 
-/* Accesibilidad: outline visible cuando se navega con teclado */
 .card-fav:has(.card-fav-toggle:focus-visible) {
     outline: 2px solid var(--color-btn-hvr);
     outline-offset: 2px;
 }
 
-
-/* --- Etiqueta de categoría sobre la imagen del producto --- */
 .product-tag {
     position: absolute;
     top: 0.5rem;
@@ -358,11 +371,6 @@ filtros, paginación y elementos decorativos
     z-index: 2;
 }
 
-/* Colores por categoría — acordes a lo que representa cada una:
-   hogar → sienna (madera, cerámica, hogar cálido)
-   moda → plum (textiles, elegancia)
-   cuidado-personal → teal (frescura, limpieza, agua)
-   alimentos → ámbar (comida, calidez, apetito)                  */
 .card[data-category="hogar"] .product-tag {
     background-color: #a0522d;
 }
@@ -379,8 +387,86 @@ filtros, paginación y elementos decorativos
     background-color: #c2410c;
 }
 
+.filters {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
 
-/* --- Principios --- */
+.filters-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filters-title {
+    color: var(--color-btn-hvr);
+    font-size: 1rem;
+    border-bottom: 2px solid var(--color-bg);
+    padding-bottom: 0.4rem;
+}
+
+.filters-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.filters-list label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.filters-list label:hover {
+    color: var(--color-btn-hvr);
+}
+
+.filters-list input[type="checkbox"] {
+    accent-color: var(--color-btn-hvr);
+    width: 1rem;
+    height: 1rem;
+}
+
+.catalog:has(.filter-cat:checked):not(:has(#filter-hogar:checked)) .card[data-category="hogar"],
+.catalog:has(.filter-cat:checked):not(:has(#filter-moda:checked)) .card[data-category="moda"],
+.catalog:has(.filter-cat:checked):not(:has(#filter-cuidado:checked)) .card[data-category="cuidado-personal"],
+.catalog:has(.filter-cat:checked):not(:has(#filter-alimentos:checked)) .card[data-category="alimentos"],
+.catalog:has(.filter-price:checked):not(:has(#price-low:checked)) .card[data-price="price-low"],
+.catalog:has(.filter-price:checked):not(:has(#price-mid:checked)) .card[data-price="price-mid"],
+.catalog:has(.filter-price:checked):not(:has(#price-high:checked)) .card[data-price="price-high"],
+.catalog:has(.filter-price:checked):not(:has(#price-premium:checked)) .card[data-price="price-premium"],
+.catalog:has(.filter-stock:checked):not(:has(#filter-instock:checked)) .card[data-stock="in"],
+.catalog:has(.filter-stock:checked):not(:has(#filter-outstock:checked)) .card[data-stock="out"] {
+    display: none;
+}
+
+.cat-anchor {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.catalog:has(#cat-hogar:target):not(:has(.filters input:checked)) .card:not([data-category="hogar"]),
+.catalog:has(#cat-moda:target):not(:has(.filters input:checked)) .card:not([data-category="moda"]),
+.catalog:has(#cat-cuidado-personal:target):not(:has(.filters input:checked)) .card:not([data-category="cuidado-personal"]),
+.catalog:has(#cat-alimentos:target):not(:has(.filters input:checked)) .card:not([data-category="alimentos"]) {
+    display: none;
+}
+
+
+/*sobre-nosotros.html*/
+
 .principle-item {
     background-color: var(--color-bg);
     padding: 1.25rem;
@@ -412,8 +498,6 @@ filtros, paginación y elementos decorativos
     font-size: 1.05rem;
 }
 
-
-/* --- Testimonios --- */
 .testimonial-card {
     flex: 0 0 85%;
     scroll-snap-align: center;
@@ -471,8 +555,6 @@ filtros, paginación y elementos decorativos
     color: var(--color-btn-hvr);
 }
 
-
-/* --- History --- */
 .history-img-wrap {
     position: relative;
     width: 100%;
@@ -493,12 +575,11 @@ filtros, paginación y elementos decorativos
     font-size: 3rem;
     position: absolute;
     width: 0;
-    top: 28%;
-    left: 18%;
+    top: 27%;
+    left: 14%;
     color: hsl(120, 100%, 30%);
     overflow: hidden;
     white-space: nowrap;
-
     animation: typing 2s steps(40) forwards 8s;
 }
 
@@ -507,7 +588,7 @@ filtros, paginación y elementos decorativos
     font-size: 1.8rem;
     position: absolute;
     bottom: 25%;
-    left: 25%;
+    left: 22%;
     color: hsl(120, 100%, 40%);
     overflow: hidden;
     white-space: nowrap;
@@ -519,7 +600,33 @@ filtros, paginación y elementos decorativos
 }
 
 
-/* --- Formulario de contacto --- */
+/*contacto.html*/
+
+.contact-intro-line {
+    display: block;
+    width: 0.18rem;
+    height: 0;
+    background: linear-gradient(to bottom, white, var(--color-btn-hvr));
+    border-radius: 1rem;
+    transform-origin: top;
+}
+
+.contact-intro:hover .contact-intro-line {
+    animation: drawLine 0.7s ease-out forwards;
+    animation-delay: var(--line-delay, 0s);
+}
+
+.contact-intro-button {
+    display: inline-block;
+    color: var(--color-btn-hvr);
+    padding: 0.8rem 1.75rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px solid hsl(120, 100%, 40%);
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -586,8 +693,6 @@ filtros, paginación y elementos decorativos
     transform: translateY(-2px);
 }
 
-
-/* --- Contact info: mapa y redes --- */
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -669,8 +774,6 @@ filtros, paginación y elementos decorativos
     color: white;
 }
 
-/* Iconos PNG dentro del círculo de contacto (fondo blanco → iconos negros tal cual;
-   en hover el fondo se vuelve verde, así que invertimos a blanco) */
 .contact-social-link img {
     width: 1.5rem;
     height: 1.5rem;
@@ -683,171 +786,8 @@ filtros, paginación y elementos decorativos
 }
 
 
-/* --- Sidebar filtros y buscador --- */
-.filters {
-    background-color: white;
-    border-radius: 1rem;
-    padding: 1.25rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.filters-block {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.filters-title {
-    color: var(--color-btn-hvr);
-    font-size: 1rem;
-    border-bottom: 2px solid var(--color-bg);
-    padding-bottom: 0.4rem;
-}
-
-.filters-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.filters-list label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: color 0.2s ease;
-}
-
-.filters-list label:hover {
-    color: var(--color-btn-hvr);
-}
-
-.filters-list input[type="checkbox"] {
-    accent-color: var(--color-btn-hvr);
-    width: 1rem;
-    height: 1rem;
-}
-
-.filters-range {
-    accent-color: var(--color-btn-hvr);
-    width: 100%;
-}
-
-.filters-range-labels {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.8rem;
-    color: hsl(120, 5%, 35%);
-}
-
-
-/* === Filtros del catálogo ===
-   Lógica: sin selección en un grupo = ese grupo no filtra (muestra todo).
-   Con 1+ marcado, sólo se muestran las cards que coincidan con lo marcado.
-   Los tres grupos (categoría, precio, stock) se combinan con AND.
-
-   Cómo se lee cada regla:
-   - :has(.filter-X:checked) → "hay al menos uno marcado en este grupo"
-   - :not(:has(#filter-Y:checked)) → "...pero ESTE específico no lo está"
-   → ocultar las cards de ese tipo. */
-
-/* Categoría */
-.catalog:has(.filter-cat:checked):not(:has(#filter-hogar:checked)) .card[data-category="hogar"],
-.catalog:has(.filter-cat:checked):not(:has(#filter-moda:checked)) .card[data-category="moda"],
-.catalog:has(.filter-cat:checked):not(:has(#filter-cuidado:checked)) .card[data-category="cuidado-personal"],
-.catalog:has(.filter-cat:checked):not(:has(#filter-alimentos:checked)) .card[data-category="alimentos"],
-
-/* Rango de precio */
-.catalog:has(.filter-price:checked):not(:has(#price-low:checked)) .card[data-price="price-low"],
-.catalog:has(.filter-price:checked):not(:has(#price-mid:checked)) .card[data-price="price-mid"],
-.catalog:has(.filter-price:checked):not(:has(#price-high:checked)) .card[data-price="price-high"],
-.catalog:has(.filter-price:checked):not(:has(#price-premium:checked)) .card[data-price="price-premium"],
-
-/* Disponibilidad */
-.catalog:has(.filter-stock:checked):not(:has(#filter-instock:checked)) .card[data-stock="in"],
-.catalog:has(.filter-stock:checked):not(:has(#filter-outstock:checked)) .card[data-stock="out"] {
-    display: none;
-}
-
-.cat-anchor {
-    position: absolute;
-    width: 0;
-    height: 0;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.catalog:has(#cat-hogar:target):not(:has(.filters input:checked)) .card:not([data-category="hogar"]),
-.catalog:has(#cat-moda:target):not(:has(.filters input:checked)) .card:not([data-category="moda"]),
-.catalog:has(#cat-cuidado-personal:target):not(:has(.filters input:checked)) .card:not([data-category="cuidado-personal"]),
-.catalog:has(#cat-alimentos:target):not(:has(.filters input:checked)) .card:not([data-category="alimentos"]) {
-    display: none;
-}
-
-
-/* --- Footer --- */
-.footer-section a {
-    position: relative;
-    color: hsl(120, 5%, 80%);
-    text-decoration: none;
-    font-size: 0.875rem;
-}
-
-.footer-section a:hover {
-    color: hsl(120, 50%, 70%);
-}
-
-/* Iconos PNG de redes sociales en el footer
-   (fondo oscuro → invertimos los iconos negros a blanco) */
-.social-link img {
-    width: 1.5rem;
-    height: 1.5rem;
-    object-fit: contain;
-    filter: invert(1);
-    transition: transform 0.25s ease, filter 0.25s ease;
-}
-
-.social-link:hover img {
-    transform: scale(1.2);
-    filter: invert(72%) sepia(35%) saturate(680%) hue-rotate(75deg) brightness(92%);
-}
-
-/* Evitar el ::after subrayado del footer-section a en los enlaces sociales */
-.social-link:hover::after {
-    content: none;
-}
-
-.footer-section a:hover::after,
-.ref-container a:hover::after {
-    content: "";
-    position: absolute;
-    height: 1rem;
-    width: 0.1rem;
-    left: 0%;
-    top: 17%;
-    border-bottom: 0.1rem solid hsl(120, 50%, 60%);
-    animation: movingline 0.5s ease forwards;
-}
-
-.ref-container a:hover::after {
-    top: 10%;
-}
-
-.footer-title {
-    color: white;
-}
-
-
-/* =========================
-   Tablet (>=720px)
-   ========================= */
+/*Tablet (>=720px)*/
 @media (min-width: 720px) {
-
     .ref-container a {
         font-size: 1.35rem;
     }
@@ -860,11 +800,13 @@ filtros, paginación y elementos decorativos
         font-size: 1.15rem;
     }
 
-    .about-hero-title {
+    .about-hero-title,
+    .contact-intro-title {
         font-size: 2.2rem;
     }
 
-    .about-hero-desc {
+    .about-hero-desc,
+    .contact-intro-desc {
         font-size: 1.15rem;
     }
 
@@ -876,14 +818,6 @@ filtros, paginación y elementos decorativos
     .history-context {
         bottom: 34%;
         left: 31%;
-    }
-
-    .contact-intro-title {
-        font-size: 2.2rem;
-    }
-
-    .contact-intro-desc {
-        font-size: 1.1rem;
     }
 
     .section-title {
@@ -908,11 +842,8 @@ filtros, paginación y elementos decorativos
 }
 
 
-/* =========================
-   Desktop (>=1024px)
-   ========================= */
+/*Desktop (>=1024px)*/
 @media (min-width: 1024px) {
-
     .ref-container a {
         position: relative;
         font-size: 1.25rem;
@@ -941,12 +872,12 @@ filtros, paginación y elementos decorativos
         font-size: 2.5rem;
     }
 
-    .about-hero-desc {
-        font-size: 1.2rem;
-    }
-
     .contact-intro-title {
         font-size: 2.6rem;
+    }
+
+    .about-hero-desc {
+        font-size: 1.2rem;
     }
 
     .contact-intro-desc {

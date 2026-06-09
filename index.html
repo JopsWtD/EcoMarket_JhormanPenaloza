@@ -30,6 +30,28 @@
 
     <main>
 
+        <section class="flash-sale-banner" aria-labelledby="flash-title">
+            <div class="flash-sale-content">
+
+                <div class="flash-sale-text">
+                    <h2 id="flash-title" class="flash-sale-title">Flash Sale</h2>
+                    <p class="flash-sale-msg">Hasta 30% OFF en productos seleccionados</p>
+                </div>
+
+                <section class="counter ">
+                    <h2 class="counter_title"></h2>
+                    <div class="counter_horas "></div>
+                    <div>:</div>
+                    <div class="counter_minutos"></div>
+                    <div>:</div>
+                    <div class="counter_segundos"></div>
+                </section>
+
+                <a href="/views/productos.html" class="flash-sale-cta">Comprar ahora</a>
+
+            </div>
+        </section>
+
         <section class="hero">
             <div class="hero-content">
                 <h1 id="titulo">Compra responsable, vive sostenible.</h1>
@@ -100,20 +122,26 @@
                             </div>
                         </article>
 
-                        <article class="card">
+                        <article class="card" data-category="alimentos" data-stock="in" data-price="price-mid">
                             <div class="card-img-wrap">
                                 <img src="/img/products/producto13.png" alt="Natura Spreads">
-                                <p class="card-tag">
-                                    <span class="card-tag-bg"></span>
-                                    <span class="card-tag-text">Destacado</span>
-                                </p>
+                                <span class="card-stock in-stock">En stock</span>
+                                <span class="product-tag">Alimentos</span>
+                                </span>
                             </div>
+
                             <div class="card-info">
-                                <h3>Natura Spreads</h3>
+                                <div class="card-header">
+                                    <h3>Natura Spreads</h3>
+                                    <label class="card-fav" aria-label="Marcar como favorito">
+                                        <input type="checkbox" class="card-fav-toggle">
+                                        <span aria-hidden="true">♥</span>
+                                    </label>
+                                </div>
+
                                 <p>Surtido de untables artesanales: frutos secos, frutas y semillas</p>
+
                                 <span class="precio">$35.000</span>
-                                <a href="/views/productos.html#cat-alimentos" class="card-button"
-                                    title="Ver todos los productos de Alimentos">Ver más</a>
                             </div>
                         </article>
                     </div>

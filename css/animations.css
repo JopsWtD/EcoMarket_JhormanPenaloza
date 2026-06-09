@@ -60,7 +60,6 @@
     }
 }
 
-
 @keyframes rainbowTag {
     0% {
         background-position: 0% 50%;
@@ -80,5 +79,61 @@
 
     to {
         width: 100%;
+    }
+}
+
+
+.counter {
+    display: flex;
+    gap: 1vh;
+}
+
+@property --contadorHoras {
+    syntax: "<integer>";
+    inherits: false;
+    initial-value: 2;
+}
+
+
+@property --contadorMinutos {
+    syntax: "<integer>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --contadorSegundos {
+    syntax: "<integer>";
+    inherits: false;
+    initial-value: 0;
+}
+
+
+@keyframes contar_h {
+    from {
+        --contadorHoras: 1;
+    }
+
+    to {
+        --contadorHoras: 0;
+    }
+}
+
+@keyframes contar_m {
+    from {
+        --contadorMinutos: 59;
+    }
+
+    to {
+        --contadorMinutos: 0;
+    }
+}
+
+@keyframes contar_s {
+    from {
+        --contadorSegundos: 59;
+    }
+
+    to {
+        --contadorSegundos: 0;
     }
 }

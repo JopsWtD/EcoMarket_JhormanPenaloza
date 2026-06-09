@@ -110,8 +110,10 @@
 }
 
 .precio {
+    position: relative;
     font-weight: bold;
     color: var(--color-btn-hvr);
+    z-index: 10;
 }
 
 .footer-section a {
@@ -273,6 +275,170 @@
     background: rgba(0, 0, 0, 0.7);
     border-radius: 0.4rem;
     z-index: 1;
+}
+
+/* Flash Sale banner */
+.flash-sale-banner {
+    background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
+    color: white;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 2px 12px rgba(220, 38, 38, 0.25);
+}
+
+.flash-sale-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.flash-sale-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.flash-sale-title {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.flash-sale-icon {
+    font-size: 1.6rem;
+    animation: bigsmall 1.2s ease-in-out infinite;
+}
+
+.flash-sale-msg {
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+/* Counter */
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.18);
+    border-radius: 0.6rem;
+    padding: 0.75rem 1.25rem;
+}
+
+.counter>div:not(.counter_horas):not(.counter_minutos):not(.counter_segundos) {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    align-self: flex-start;
+    margin-top: 0.6rem;
+}
+
+.counter_horas,
+.counter_minutos,
+.counter_segundos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.counter_horas::after,
+.counter_minutos::after,
+.counter_segundos::after {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 14px;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #1f2937;
+    box-shadow:
+        0 5px 0 #3ecf6d,
+        0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.counter_horas::before,
+.counter_minutos::before,
+.counter_segundos::before {
+    order: 2;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.counter_horas::before {
+    content: "horas";
+}
+
+.counter_minutos::before {
+    content: "minutos";
+}
+
+.counter_segundos::before {
+    content: "segundos";
+}
+
+
+.counter_horas {
+    counter-reset: contador1 var(--contadorHoras);
+    animation: contar_h 7200s linear forwards;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+
+    &::after {
+        content: counter(contador1, decimal-leading-zero);
+    }
+}
+
+.counter_minutos {
+    counter-reset: contador2 var(--contadorMinutos);
+    animation: contar_m 3600s steps(60) forwards;
+    animation-delay: 1s;
+    animation-iteration-count: 2;
+
+    &::after {
+        content: counter(contador2, decimal-leading-zero);
+    }
+}
+
+.counter_segundos {
+    counter-reset: contador3 var(--contadorSegundos);
+    animation: contar_s 60s steps(60) forwards;
+    animation-delay: 1s;
+    animation-iteration-count: 120;
+
+    &::after {
+        content: counter(contador3, decimal-leading-zero);
+    }
+}
+
+.flash-sale-cta {
+    display: inline-block;
+    background-color: white;
+    color: #dc2626;
+    padding: 0.75rem 1.75rem;
+    border-radius: 0.6rem;
+    font-weight: bolder;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flash-sale-cta:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -462,6 +628,84 @@
 .catalog:has(#cat-cuidado-personal:target):not(:has(.filters input:checked)) .card:not([data-category="cuidado-personal"]),
 .catalog:has(#cat-alimentos:target):not(:has(.filters input:checked)) .card:not([data-category="alimentos"]) {
     display: none;
+}
+
+/* Flash Sale: overlay sobre la imagen + precio con descuento.
+   Se quita la overlay al hacer hover para revelar la card normal. */
+.flash-sale-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    transition: opacity 0.35s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.flash-sale-upper {
+    padding: 0.2rem 0.2rem;
+    display: flex;
+    gap: 1.5rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
+}
+
+.flash-sale-overlay-icon {
+    font-size: 1.3rem;
+    animation: bigsmall 1.2s ease-in-out infinite;
+    justify-content: center;
+    object-fit: contain;
+}
+
+.flash-sale-overlay-text {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    letter-spacing: 0.08em;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.flash-sale-lower {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
+}
+
+.flash-sale-overlay-discount {
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card.flash-sale:hover .flash-sale-overlay {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.precio-original {
+    color: hsl(120, 5%, 45%);
+    text-decoration: line-through;
+    font-weight: normal;
+    font-size: 0.9em;
+    margin-right: 0.4rem;
+}
+
+.precio-flash {
+    color: #dc2626;
+    font-weight: bolder;
 }
 
 
@@ -789,6 +1033,24 @@
 @media (min-width: 720px) {
     .ref-container a {
         font-size: 1.35rem;
+    }
+
+    .flash-sale-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding-inline: 1rem;
+    }
+
+    .flash-sale-title {
+        font-size: 1.6rem;
+        justify-content: flex-start;
+    }
+
+    .flash-sale-timer-display {
+        font-size: 2.2rem;
     }
 
     #titulo {

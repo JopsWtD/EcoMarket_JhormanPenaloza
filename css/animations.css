@@ -82,18 +82,17 @@
     }
 }
 
-
-.counter {
-    display: flex;
-    gap: 1vh;
-}
-
-@property --contadorHoras {
+@property --contadorDias {
     syntax: "<integer>";
     inherits: false;
     initial-value: 2;
 }
 
+@property --contadorHoras {
+    syntax: "<integer>";
+    inherits: false;
+    initial-value: 0;
+}
 
 @property --contadorMinutos {
     syntax: "<integer>";
@@ -101,16 +100,19 @@
     initial-value: 0;
 }
 
-@property --contadorSegundos {
-    syntax: "<integer>";
-    inherits: false;
-    initial-value: 0;
-}
+@keyframes contar_d {
+    from {
+        --contadorDias: 1;
+    }
 
+    to {
+        --contadorDias: 0;
+    }
+}
 
 @keyframes contar_h {
     from {
-        --contadorHoras: 1;
+        --contadorHoras: 23;
     }
 
     to {
@@ -125,15 +127,5 @@
 
     to {
         --contadorMinutos: 0;
-    }
-}
-
-@keyframes contar_s {
-    from {
-        --contadorSegundos: 59;
-    }
-
-    to {
-        --contadorSegundos: 0;
     }
 }

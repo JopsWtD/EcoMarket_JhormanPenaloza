@@ -395,10 +395,10 @@
     animation: contar_d 172800s linear forwards;
     animation-iteration-count: 1;
     animation-delay: 1s;
+}
 
-    &::after {
-        content: counter(contador1, decimal-leading-zero);
-    }
+.counter_dias::after {
+    content: counter(contador1, decimal-leading-zero);
 }
 
 .counter_horas {
@@ -406,10 +406,10 @@
     animation: contar_h 86400s steps(24) forwards;
     animation-iteration-count: 2;
     animation-delay: 1s;
+}
 
-    &::after {
-        content: counter(contador2, decimal-leading-zero);
-    }
+.counter_horas::after {
+    content: counter(contador2, decimal-leading-zero);
 }
 
 .counter_minutos {
@@ -417,10 +417,10 @@
     animation: contar_m 3600s steps(60) forwards;
     animation-iteration-count: 2880;
     animation-delay: 1s;
+}
 
-    &::after {
-        content: counter(contador3, decimal-leading-zero);
-    }
+.counter_minutos::after {
+    content: counter(contador3, decimal-leading-zero);
 }
 
 .flash-sale-cta {
